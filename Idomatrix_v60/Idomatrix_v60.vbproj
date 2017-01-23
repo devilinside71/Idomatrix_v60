@@ -202,6 +202,12 @@
   -->
   <ItemGroup>
     <AppDesigner Include="My Project\" />
+    <Compile Include="FormRegion1.Designer.vb">
+      <DependentUpon>FormRegion1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegion1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="IGMPane.Designer.vb">
       <DependentUpon>IGMPane.vb</DependentUpon>
     </Compile>
@@ -226,6 +232,9 @@
     <Compile Include="ThisAddIn.vb">
       <SubType>Code</SubType>
     </Compile>
+    <EmbeddedResource Include="FormRegion1.resx">
+      <DependentUpon>FormRegion1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectNewItemForm.resx">
       <DependentUpon>SelectNewItemForm.vb</DependentUpon>
     </EmbeddedResource>
