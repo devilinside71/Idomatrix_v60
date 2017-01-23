@@ -78,6 +78,20 @@ Partial Class IGMPane
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.ColumnHeader29 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader30 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader31 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader32 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader33 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader34 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader35 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader36 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader37 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader38 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader39 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader40 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader41 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader42 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -493,6 +507,7 @@ Partial Class IGMPane
         'ListView5
         '
         Me.ListView5.BackColor = System.Drawing.Color.Gray
+        Me.ListView5.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader29, Me.ColumnHeader30, Me.ColumnHeader31, Me.ColumnHeader32, Me.ColumnHeader33, Me.ColumnHeader34, Me.ColumnHeader35})
         Me.ListView5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.ListView5.FullRowSelect = True
@@ -507,6 +522,7 @@ Partial Class IGMPane
         'ListView6
         '
         Me.ListView6.BackColor = System.Drawing.Color.Silver
+        Me.ListView6.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader36, Me.ColumnHeader37, Me.ColumnHeader38, Me.ColumnHeader39, Me.ColumnHeader40, Me.ColumnHeader41, Me.ColumnHeader42})
         Me.ListView6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.ListView6.FullRowSelect = True
@@ -581,6 +597,74 @@ Partial Class IGMPane
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "X"
         Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'ColumnHeader29
+        '
+        Me.ColumnHeader29.Text = "T"
+        Me.ColumnHeader29.Width = 20
+        '
+        'ColumnHeader30
+        '
+        Me.ColumnHeader30.Text = "Megnevezés"
+        Me.ColumnHeader30.Width = 250
+        '
+        'ColumnHeader31
+        '
+        Me.ColumnHeader31.Text = "Dátum"
+        Me.ColumnHeader31.Width = 75
+        '
+        'ColumnHeader32
+        '
+        Me.ColumnHeader32.Text = "ID"
+        Me.ColumnHeader32.Width = 2
+        '
+        'ColumnHeader33
+        '
+        Me.ColumnHeader33.Text = "Terv"
+        Me.ColumnHeader33.Width = 40
+        '
+        'ColumnHeader34
+        '
+        Me.ColumnHeader34.Text = "Tény"
+        Me.ColumnHeader34.Width = 40
+        '
+        'ColumnHeader35
+        '
+        Me.ColumnHeader35.Text = "Infó"
+        '
+        'ColumnHeader36
+        '
+        Me.ColumnHeader36.Text = "T"
+        Me.ColumnHeader36.Width = 20
+        '
+        'ColumnHeader37
+        '
+        Me.ColumnHeader37.Text = "Megnevezés"
+        Me.ColumnHeader37.Width = 250
+        '
+        'ColumnHeader38
+        '
+        Me.ColumnHeader38.Text = "Dátum"
+        Me.ColumnHeader38.Width = 75
+        '
+        'ColumnHeader39
+        '
+        Me.ColumnHeader39.Text = "ID"
+        Me.ColumnHeader39.Width = 2
+        '
+        'ColumnHeader40
+        '
+        Me.ColumnHeader40.Text = "Terv"
+        Me.ColumnHeader40.Width = 40
+        '
+        'ColumnHeader41
+        '
+        Me.ColumnHeader41.Text = "Tény"
+        Me.ColumnHeader41.Width = 40
+        '
+        'ColumnHeader42
+        '
+        Me.ColumnHeader42.Text = "Infó"
         '
         'IGMPane
         '
@@ -660,4 +744,18 @@ Partial Class IGMPane
     Friend WithEvents ColumnHeader26 As Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader27 As Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader28 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader29 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader30 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader31 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader32 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader33 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader34 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader35 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader36 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader37 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader38 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader39 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader40 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader41 As Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader42 As Windows.Forms.ColumnHeader
 End Class
