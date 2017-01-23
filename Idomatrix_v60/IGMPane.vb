@@ -87,11 +87,128 @@ Public Class IGMPane
         Suspended = False
         Call RefreshData()
     End Sub
+    Private Sub OpenItem(sender As Object)
+        Dim myItem As Object
+
+        myItem = Globals.ThisAddIn.Application.Session.GetItemFromID(sender.SelectedItems.Item(0).SubItems.Item(3).Text)
+        myItem.Display(True)
+        Call RefreshData()
+
+    End Sub
+
     Public Sub RefreshData()
+        Dim sumdata As Double
+        Dim resSF As Integer
+        Dim resNSF As Integer
+        Dim resSNF As Integer
+        Dim resNSNF As Integer
+        Dim resTSF As Integer
+        Dim resTNSF As Integer
+        Dim resTSNF As Integer
+        Dim resTNSNF As Integer
+
+        resultNSF = 0
+        resultNSNF = 0
+        resultSNF = 0
+        resultSF = 0
+        resultT_NSF = 0
+        resultT_SF = 0
+        resultT_SNF = 0
+        resultT_NSNF = 0
+        resTNSF = 0
+        resTNSNF = 0
+        resTSF = 0
+        resTSNF = 0
+
         Call ClearLists()
         Call SetEmailTasksInRange()
         Call SetTasksInRange()
         Call SetAppointmentsInRange()
+
+        Label11.Text = resultSF.ToString
+        Label10.Text = resultSNF.ToString
+        Label12.Text = resultNSF.ToString
+        Label13.Text = resultNSNF.ToString
+        Label16.Text = Math.Round(resultSF / 60, 2)
+        Label15.Text = Math.Round(resultSNF / 60, 2)
+        Label17.Text = Math.Round(resultNSF / 60, 2)
+        Label18.Text = Math.Round(resultNSNF / 60, 2)
+        Label20.Text = resultT_NSF.ToString
+        Label21.Text = resultT_SF.ToString
+        Label22.Text = resultT_SNF.ToString
+        Label23.Text = resultT_NSNF.ToString
+        Label25.Text = Math.Round(resultT_NSF / 60, 2)
+        Label26.Text = Math.Round(resultT_SF / 60, 2)
+        Label27.Text = Math.Round(resultT_SNF / 60, 2)
+        Label28.Text = Math.Round(resultT_NSNF / 60, 2)
+
+        resultSum = resultSF + resultNSF + resultNSNF + resultSNF
+        Label14.Text = resultSum.ToString
+        sumdata = Math.Round(resultSum / 60, 2)
+        Label19.Text = sumdata.ToString
+
+        resultT_sum = resultT_SF + resultT_NSF + resultT_SNF + resultT_NSNF
+        Label24.Text = resultT_sum.ToString
+        sumdata = Math.Round(resultT_sum / 60, 2)
+        Label29.Text = sumdata.ToString
+
+        resNSF = CInt(resultNSF / resultSum * 100)
+        resSF = CInt(resultSF / resultSum * 100)
+        resSNF = CInt(resultSNF / resultSum * 100)
+        resNSNF = 100 - resSF - resNSF - resSNF
+        If resNSNF < 0 Then
+            resNSNF = 0
+        End If
+        Label37.Text = resNSF.ToString + "%"
+        Label38.Text = resSF.ToString + "%"
+        Label39.Text = resSNF.ToString + "%"
+        Label40.Text = resNSNF.ToString + "%"
+
+        resultEvalSF = resSF
+        resultEvalSNF = resSNF
+        resultEvalNSF = resNSF
+        resultEvalNSNF = resNSNF
+
+        resTNSF = CInt(resultT_NSF / resultT_sum * 100)
+        resTSF = CInt(resultT_SF / resultT_sum * 100)
+        resTSNF = CInt(resultT_SNF / resultT_sum * 100)
+        resTNSNF = CInt(resultT_NSNF / resultT_sum * 100)
+        If resTNSNF < 0 Then
+            resTNSNF = 0
+        End If
+        Label41.Text = resTNSF.ToString + "%"
+        Label42.Text = resTSF.ToString + "%"
+        Label43.Text = resTSNF.ToString + "%"
+        Label44.Text = resTNSNF.ToString + "%"
+        resultT_EvalNSF = resTNSF
+        resultT_EvalSF = resTSF
+        resultT_EvalSNF = resTSNF
+        resultT_EvalNSNF = resTNSNF
+
+        Dim styles As TableLayoutColumnStyleCollection =
+Me.TableLayoutPanel14.ColumnStyles
+
+        Dim styles2 As TableLayoutColumnStyleCollection =
+    Me.TableLayoutPanel15.ColumnStyles
+
+        styles(0).SizeType = SizeType.Percent
+        styles(0).Width = resNSF
+        styles(1).SizeType = SizeType.Percent
+        styles(1).Width = resSF
+        styles(2).SizeType = SizeType.Percent
+        styles(2).Width = resSNF
+        styles(3).SizeType = SizeType.Percent
+        styles(3).Width = resNSNF
+
+        styles2(0).SizeType = SizeType.Percent
+        styles2(0).Width = resTNSF
+        styles2(1).SizeType = SizeType.Percent
+        styles2(1).Width = resTSF
+        styles2(2).SizeType = SizeType.Percent
+        styles2(2).Width = resTSNF
+        styles2(3).SizeType = SizeType.Percent
+        styles2(3).Width = resTNSNF
+
     End Sub
     Private Sub ClearLists()
         Me.ListView1.Items.Clear()
@@ -601,5 +718,272 @@ Public Class IGMPane
             Return Nothing
         End Try
     End Function
+
 #End Region
+
+    Private Sub ListView5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView5.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ListView5_DoubleClick(sender As Object, e As EventArgs) Handles ListView5.DoubleClick
+        Call OpenItem(sender)
+    End Sub
+
+    Private Sub ListView6_DoubleClick(sender As Object, e As EventArgs) Handles ListView6.DoubleClick
+        Call OpenItem(sender)
+    End Sub
+
+    Private Sub ListView4_DoubleClick(sender As Object, e As EventArgs) Handles ListView4.DoubleClick
+        Call OpenItem(sender)
+    End Sub
+
+    Private Sub ListView3_DoubleClick(sender As Object, e As EventArgs) Handles ListView3.DoubleClick
+        Call OpenItem(sender)
+    End Sub
+
+    Private Sub ListView2_DoubleClick(sender As Object, e As EventArgs) Handles ListView2.DoubleClick
+        Call OpenItem(sender)
+    End Sub
+
+    Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
+        Call OpenItem(sender)
+    End Sub
+
+    Private Sub ListView1_MouseUp(sender As Object, e As MouseEventArgs) Handles ListView1.MouseUp
+        Select Case e.Button
+            Case MouseButtons.Right
+                Call AddNewItem("@Sürgős - Fontos")
+            Case MouseButtons.Middle
+        End Select
+    End Sub
+
+#Region "Add new items"
+
+    Private Sub AddNewItem(catStr As String)
+        'Dim res As MsgBoxResult = MessageBox.Show("Új találkozó hozzáadása." + vbCrLf + catStr, "Új elem", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+        'Select Case res
+        '    Case vbYes
+        '        Call CreateAppt(catStr)
+        '    Case vbNo
+        '        Dim res2 As MsgBoxResult = MessageBox.Show("Új feladat hozzáadása" + vbCrLf + catStr, "Új elem", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        '        Select Case res2
+        '            Case vbYes
+        '                Call CreateTask(catStr)
+        '        End Select
+        'End Select
+        Dim newItemForm As SelectNewItemForm
+        newItemForm = New SelectNewItemForm
+        newItemForm.Text = "Új elem"
+        newItemForm.Label1.Text = catStr
+        'newItemForm.Top = (My.Computer.Screen.WorkingArea.Height) / 2 - (newItemForm.Height \ 2)
+        'newItemForm.Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (newItemForm.Width \ 2)
+        If catStr = "@Sürgős - Fontos" Then
+            newItemForm.Button1.BackColor = Drawing.Color.CornflowerBlue
+            newItemForm.Button2.BackColor = Drawing.Color.CornflowerBlue
+            newItemForm.Button3.BackColor = Drawing.Color.CornflowerBlue
+            newItemForm.Button3.Visible = False
+        End If
+        If catStr = "@Sürgős - Nem fontos" Then
+            newItemForm.Button1.BackColor = Drawing.Color.Yellow
+            newItemForm.Button2.BackColor = Drawing.Color.Yellow
+            newItemForm.Button3.BackColor = Drawing.Color.Yellow
+            newItemForm.Button3.Visible = True
+        End If
+        If catStr = "@Nem sürgős - Fontos" Then
+            newItemForm.Button1.BackColor = Drawing.Color.LimeGreen
+            newItemForm.Button2.BackColor = Drawing.Color.LimeGreen
+            newItemForm.Button3.BackColor = Drawing.Color.LimeGreen
+            newItemForm.Button3.Visible = False
+        End If
+        If catStr = "@Nem sürgős - Nem fontos" Then
+            newItemForm.Button1.BackColor = Drawing.Color.Salmon
+            newItemForm.Button2.BackColor = Drawing.Color.Salmon
+            newItemForm.Button3.BackColor = Drawing.Color.Salmon
+            newItemForm.Button3.Visible = False
+        End If
+
+
+
+        newItemForm.ShowDialog()
+
+        If newItemForm.ItemChoiced = 1 Then
+            Call CreateAppt(catStr)
+        End If
+        If newItemForm.ItemChoiced = 2 Then
+            Call CreateTask(catStr)
+        End If
+        If newItemForm.ItemChoiced = 3 Then
+            'Spec levelezés
+            'Call CreateSpecAppt(catStr, "Levelezés átnézése", 90)
+            Call CreateSpecTask(catStr, "Levelezés átnézése", 90)
+            'MessageBox.Show("Ide a spec jön")
+        End If
+    End Sub
+    Private Sub AddNewItemMonthly(catStr As String)
+        Dim res2 As MsgBoxResult = MessageBox.Show("Új havi feladat hozzáadása", "Új elem", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Select Case res2
+            Case vbYes
+                Call CreateTaskMonthly(catStr)
+        End Select
+    End Sub
+    Private Sub AddNewItemMonthlyGoal(catStr As String)
+        Dim res2 As MsgBoxResult = MessageBox.Show("Új havi cél hozzáadása", "Új elem", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Select Case res2
+            Case vbYes
+                Call CreateTaskMonthly(catStr)
+        End Select
+    End Sub
+    Private Sub CreateSpecAppt(catStr As String, subject As String, duration As Integer)
+        Dim myItem As Object
+        'Dim myRequiredAttendee, myOptionalAttendee, myResourceAttendee As Outlook.Recipient
+        myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olAppointmentItem)
+        myItem.Subject = subject + " (r)"
+        'myItem.Location = "Conference Room B"
+        'myItem.Start = #9/24/2015 1:30:00 PM#
+        myItem.Start = DateTime.Today
+        myItem.ActualWork = duration
+        myItem.ReminderSet = False
+        'myRequiredAttendee = myItem.Recipients.Add("Nate Sun")
+        'myOptionalAttendee = myItem.Recipients.Add("Kevin Kennedy")
+        'myResourceAttendee = myItem.Recipients.Add("Conference Room B")
+        myItem.Categories = catStr
+        myItem.Display(True)
+
+        Call RefreshData()
+
+
+    End Sub
+    Private Sub CreateSpecTask(catStr As String, subject As String, duration As Integer)
+        Dim myItem As Object
+
+        myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem)
+        myItem.Subject = subject + " (r)"
+        myItem.StartDate = DateTime.Today
+
+        myItem.ActualWork = duration
+        myItem.ReminderSet = False
+        myItem.Categories = catStr
+        myItem.Display(True)
+
+        Call RefreshData()
+
+
+    End Sub
+    Friend Sub CreateAppointment(title As String)
+        'Dim apptItem As Outlook.AppointmentItem = Nothing
+        'apptItem =
+        '        OutlookApp.Session.Application.CreateItem(
+        '        Outlook.OlItemType.olAppointmentItem)
+
+        'With apptItem
+        '    .Subject = title
+        '    .Start = DateTime.Now
+        '    .End = Date.Now.AddHours(1)
+        '    .Save()
+        '    .ReminderSet = False
+        'End With
+
+        ''Release COM Objects
+        'If apptItem IsNot Nothing Then Marshal.ReleaseComObject(apptItem)
+    End Sub
+    Private Sub CreateAppt(catStr As String)
+        Dim myItem As Object
+        'Dim myRequiredAttendee, myOptionalAttendee, myResourceAttendee As Outlook.Recipient
+        myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olAppointmentItem)
+        'myItem.Subject = "Strategy Meeting"
+        'myItem.Location = "Conference Room B"
+        'myItem.Start = #9/24/2015 1:30:00 PM#
+        'myItem.Duration = 90
+        'myRequiredAttendee = myItem.Recipients.Add("Nate Sun")
+        'myOptionalAttendee = myItem.Recipients.Add("Kevin Kennedy")
+        'myResourceAttendee = myItem.Recipients.Add("Conference Room B")
+        myItem.Categories = catStr
+        myItem.Display(True)
+
+        Call RefreshData()
+
+    End Sub
+    Private Sub CreateTask(catStr As String)
+        Dim myItem As Object
+        myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem)
+        myItem.Categories = catStr
+        myItem.ActualWork = 30
+        myItem.Display(True)
+        'MessageBox.Show("Feladat")
+
+        Call RefreshData()
+    End Sub
+    Private Sub CreateTaskMonthly(catStr As String)
+        Dim myItem As Object
+        myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem)
+        myItem.Categories = catStr
+        Dim FirstDay As Date
+        'This year, this month, first day
+        FirstDay = DateSerial(Today.Year, Today.Month, 1)
+        Dim LastDay As Date
+        'This year, next month, 0th day is this month's last day
+        LastDay = DateSerial(Today.Year, Today.Month + 1, 0)
+        myItem.StartDate = FirstDay
+        myItem.DueDate = LastDay
+        myItem.ActualWork = 20
+        myItem.Display(True)
+        'MessageBox.Show("Feladat")
+
+        Call RefreshData()
+
+    End Sub
+
+#End Region
+
+    Private Sub ListView2_MouseUp(sender As Object, e As MouseEventArgs) Handles ListView2.MouseUp
+        Select Case e.Button
+            Case MouseButtons.Right
+                Call AddNewItem("@Nem sürgős - Fontos")
+            Case MouseButtons.Middle
+        End Select
+    End Sub
+
+    Private Sub ListView3_MouseUp(sender As Object, e As MouseEventArgs) Handles ListView3.MouseUp
+        Select Case e.Button
+            Case MouseButtons.Right
+                Call AddNewItem("@Sürgős - Nem fontos")
+            Case MouseButtons.Middle
+        End Select
+    End Sub
+
+    Private Sub ListView4_MouseUp(sender As Object, e As MouseEventArgs) Handles ListView4.MouseUp
+        Select Case e.Button
+            Case MouseButtons.Right
+                Call AddNewItem("@Nem sürgős - Nem fontos")
+            Case MouseButtons.Middle
+        End Select
+    End Sub
+
+    Private Sub ListView5_MouseUp(sender As Object, e As MouseEventArgs) Handles ListView5.MouseUp
+        Select Case e.Button
+            Case MouseButtons.Right
+                Call AddNewItemMonthlyGoal("@Havi cél")
+            Case MouseButtons.Middle
+        End Select
+    End Sub
+
+    Private Sub ListView6_MouseUp(sender As Object, e As MouseEventArgs) Handles ListView6.MouseUp
+        Select Case e.Button
+            Case MouseButtons.Right
+                Call AddNewItemMonthly("@Havi feladat")
+            Case MouseButtons.Middle
+        End Select
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Call RefreshData()
+    End Sub
+
+    Private Sub SendReport(Optional Test As Boolean = False)
+
+    End Sub
 End Class
