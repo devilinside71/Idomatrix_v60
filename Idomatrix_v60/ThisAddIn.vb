@@ -1,9 +1,17 @@
 ﻿Imports Microsoft.Office.Interop.Outlook
 
 Public Class ThisAddIn
+    Private taskPaneControl1 As IGMPane
+    Public Shared WithEvents taskPaneValue As Microsoft.Office.Tools.CustomTaskPane
 
     Private Sub ThisAddIn_Startup() Handles Me.Startup
         Call AddCategories()
+        'TaskPane
+        taskPaneControl1 = New IGMPane()
+        taskPaneValue = Me.CustomTaskPanes.Add(taskPaneControl1, "Időmátrix")
+        taskPaneValue.Visible = True
+        taskPaneValue.DockPosition = Office.MsoCTPDockPosition.msoCTPDockPositionRight
+
     End Sub
 
     Private Sub ThisAddIn_Shutdown() Handles Me.Shutdown
