@@ -27,6 +27,7 @@ Public Class IGMPane
         Suspended = True
         DateTimePicker1.Value = DateTime.Today.Date
         DateTimePicker2.Value = DateTime.Today.Date
+        Call RefreshData()
         Suspended = False
     End Sub
 
@@ -34,6 +35,7 @@ Public Class IGMPane
         Suspended = True
         DateTimePicker1.Value = DateTime.Today.AddDays(1).Date
         DateTimePicker2.Value = DateTime.Today.AddDays(1).Date
+        Call RefreshData()
         Suspended = False
     End Sub
 
@@ -41,6 +43,7 @@ Public Class IGMPane
         Suspended = True
         DateTimePicker1.Value = Today.AddDays((Today.DayOfWeek - DayOfWeek.Monday) * -1).Date
         DateTimePicker2.Value = DateTimePicker1.Value.AddDays(4).Date
+        Call RefreshData()
         Suspended = False
     End Sub
 
