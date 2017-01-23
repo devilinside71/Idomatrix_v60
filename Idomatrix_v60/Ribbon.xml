@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+    <ribbon>
+        <tabs>
+            <tab id="Tab1" label="Időmátrix">
+              <group id="GroupMVez" label="Időmátrix">
+                <button id="ButtonMOnOff" onAction="ButtonMOnOff_Click" label="Mátrix megjelenítése" getImage="imageRibbon_GetImage_MatrixCat" showImage="true" size="large" />
+              </group>
+              <group id="GroupMCats" label="Időmátrix kategóriák">
+                    <button id="ButtonCatSF" imageMso="AppointmentColor2" label="Sürgős - Fontos" onAction="OnMyButtonClick" />
+                    <button id="ButtonCatSNF" imageMso="AppointmentColor10" label="Sürgős - Nem fontos" onAction="OnMyButtonClick" />
+                    <separator id="Separator1" />
+                    <button id="ButtonCatNSF" imageMso="AppointmentColor3" label="Nem sürgős - Fontos" onAction="OnMyButtonClick" />
+                    <button id="ButtonCatNSNF" imageMso="AppointmentColor1" label="Nem sürgős - Nem fontos" onAction="OnMyButtonClick" />
+                <separator id="Separator2" />
+                <button id="ButtonCatMonthly" imageMso="AppointmentColor4" label="Havi feladat" onAction="OnMyButtonClick" />
+                <button id="ButtonCatMonthlyGoal" imageMso="DiagramChangeToTargetClassic" label="Havi cél" onAction="OnMyButtonClick" />
+                <separator id="Separator3" />
+                <button id="ButtonDelMatrixCat" getImage="imageRibbon_GetImage_DelMatrixCat" label="Időmátrix kategória törlése" onAction="OnMyButtonClickDel" />
+              </group>
+            </tab>
+          </tabs>
+        </ribbon>
+        <contextMenus>
+          <contextMenu idMso="ContextMenuMailItem">
+            <menuSeparator id="MySeparator01Mail" />
+            <button id="MyContextMenuMailItemSF" imageMso="AppointmentColor2" label="Sürgős - Fontos" onAction="OnMyButtonClick" />
+            <button id="MyContextMenuMailItemSNF" imageMso="AppointmentColor10" label="Sürgős - Nem fontos" onAction="OnMyButtonClick" />
+            <button id="MyContextMenuMailItemNSF" imageMso="AppointmentColor3" label="Nem sürgős - Fontos" onAction="OnMyButtonClick" />
+            <button id="MyContextMenuMailItemNSNF" imageMso="AppointmentColor1" label="Nem sürgős - Nem fontos" onAction="OnMyButtonClick" />
+            <button id="MyContextMenuMailItemDel" getImage="imageRibbon_GetImage_DelMatrixCat" label="Időmátrix kategória törlése" onAction="OnMyButtonClickDel" />
+            <menuSeparator id="MySeparator02Mail" />
+          </contextMenu>
+          <contextMenu idMso="ContextMenuCalendarItem">
+      <menuSeparator id="MySeparator01Calendar" />
+        <button id="MyContextMenuCalendarItemSF" imageMso="AppointmentColor2" label="Sürgős - Fontos" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuCalendarItemSNF" imageMso="AppointmentColor10" label="Sürgős - Nem fontos" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuCalendarItemNSF" imageMso="AppointmentColor3" label="Nem sürgős - Fontos" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuCalendarItemNSNF" imageMso="AppointmentColor1" label="Nem sürgős - Nem fontos" onAction="OnMyButtonClick"/>
+            <button id="MyContextMenuCalendarItemDel" getImage="imageRibbon_GetImage_DelMatrixCat" label="Időmátrix kategória törlése" onAction="OnMyButtonClickDel" />
+            <menuSeparator id="MySeparator02Calendar" />
+    </contextMenu> 
+    <contextMenu idMso="ContextMenuTaskItem">
+      <menuSeparator id="MySeparator01Task" />
+        <button id="MyContextMenuTaskItemSF" imageMso="AppointmentColor2" label="Sürgős - Fontos" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuTaskItemSNF" imageMso="AppointmentColor10" label="Sürgős - Nem fontos" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuTaskItemNSF" imageMso="AppointmentColor3" label="Nem sürgős - Fontos" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuTaskItemNSNF" imageMso="AppointmentColor1" label="Nem sürgős - Nem fontos" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuTaskItemMonthly" imageMso="AppointmentColor4" label="Havi feladat" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuTaskItemMonthlyGoal" imageMso="DiagramChangeToTargetClassic" label="Havi cél" onAction="OnMyButtonClick"/>
+      <button id="MyContextMenuTaskItemDel" getImage="imageRibbon_GetImage_DelMatrixCat" label="Időmátrix kategória törlése" onAction="OnMyButtonClickDel" />
+      <menuSeparator id="MySeparator02Task" />
+    </contextMenu> 
+    <contextMenu idMso="ContextMenuFlaggedMailItem">
+      <menuSeparator id="MySeparator01FlaggedMail" />
+        <button id="MyContextMenuFlaggedMailItemSF" imageMso="AppointmentColor2" label="Sürgős - Fontos" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuFlaggedMailItemSNF" imageMso="AppointmentColor10" label="Sürgős - Nem fontos" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuFlaggedMailItemNSF" imageMso="AppointmentColor3" label="Nem sürgős - Fontos" onAction="OnMyButtonClick"/>
+        <button id="MyContextMenuFlaggedMailItemNSNF" imageMso="AppointmentColor1" label="Nem sürgős - Nem fontos" onAction="OnMyButtonClick"/>
+      <button id="MyContextMenuFlaggedMailItemDel" getImage="imageRibbon_GetImage_DelMatrixCat" label="Időmátrix kategória törlése" onAction="OnMyButtonClickDel" />
+      <menuSeparator id="MySeparator02FlaggedMail" />
+    </contextMenu>   
+  </contextMenus>
+</customUI>

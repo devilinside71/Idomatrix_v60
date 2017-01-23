@@ -17,6 +17,17 @@ Public Class ThisAddIn
     Private Sub ThisAddIn_Shutdown() Handles Me.Shutdown
 
     End Sub
+    Protected Overrides Function CreateRibbonExtensibilityObject() As Microsoft.Office.Core.IRibbonExtensibility
+        Return New Ribbon()
+    End Function
+    Public ReadOnly Property TaskPane() As Microsoft.Office.Tools.CustomTaskPane
+        Get
+            Return taskPaneValue
+        End Get
+    End Property
+    Public Sub RefreshTaskpane()
+        Call taskPaneControl1.RefreshData()
+    End Sub
     ''' <summary>
     ''' Kategóriák hozzáadása, ha még nem léteznek
     ''' </summary>
