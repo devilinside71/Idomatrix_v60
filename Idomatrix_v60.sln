@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Idomatrix_v60", "Idomatrix_v60\Idomatrix_v60.vbproj", "{C83B973A-5A49-4151-8D97-2790B8A9F15A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C83B973A-5A49-4151-8D97-2790B8A9F15A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C83B973A-5A49-4151-8D97-2790B8A9F15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C83B973A-5A49-4151-8D97-2790B8A9F15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C83B973A-5A49-4151-8D97-2790B8A9F15A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
