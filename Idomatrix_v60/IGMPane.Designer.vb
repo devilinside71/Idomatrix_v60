@@ -280,7 +280,7 @@ Partial Class IGMPane
         '
         'ListView2
         '
-        Me.ListView2.BackColor = System.Drawing.Color.LimeGreen
+        Me.ListView2.BackColor = System.Drawing.Color.LightGreen
         Me.ListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14})
         Me.ListView2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
@@ -829,7 +829,7 @@ Partial Class IGMPane
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label1.BackColor = System.Drawing.Color.LightGreen
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 18)
@@ -941,7 +941,7 @@ Partial Class IGMPane
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label10.BackColor = System.Drawing.Color.LightGreen
         Me.Label10.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label10.Location = New System.Drawing.Point(130, 18)
         Me.Label10.Name = "Label10"
@@ -1001,7 +1001,7 @@ Partial Class IGMPane
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label15.BackColor = System.Drawing.Color.LightGreen
         Me.Label15.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label15.Location = New System.Drawing.Point(177, 18)
         Me.Label15.Name = "Label15"
@@ -1061,7 +1061,7 @@ Partial Class IGMPane
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label20.BackColor = System.Drawing.Color.LightGreen
         Me.Label20.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label20.Location = New System.Drawing.Point(224, 18)
         Me.Label20.Name = "Label20"
@@ -1121,7 +1121,7 @@ Partial Class IGMPane
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label25.BackColor = System.Drawing.Color.LightGreen
         Me.Label25.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label25.Location = New System.Drawing.Point(271, 18)
         Me.Label25.Name = "Label25"
@@ -1216,7 +1216,7 @@ Partial Class IGMPane
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label33.BackColor = System.Drawing.Color.LightGreen
         Me.Label33.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label33.Location = New System.Drawing.Point(3, 0)
         Me.Label33.Name = "Label33"
@@ -1308,7 +1308,7 @@ Partial Class IGMPane
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label37.BackColor = System.Drawing.Color.LightGreen
         Me.Label37.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label37.Location = New System.Drawing.Point(3, 0)
         Me.Label37.Name = "Label37"
@@ -1401,7 +1401,7 @@ Partial Class IGMPane
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label41.BackColor = System.Drawing.Color.LightGreen
         Me.Label41.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label41.Location = New System.Drawing.Point(3, 0)
         Me.Label41.Name = "Label41"
@@ -1462,7 +1462,7 @@ Partial Class IGMPane
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(324, 374)
         Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "X"
+        Me.TabPage4.Text = "Súgó"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'TabPage5

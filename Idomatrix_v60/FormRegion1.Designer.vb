@@ -34,15 +34,15 @@ Partial Class FormRegion1
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel3.SuspendLayout()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -85,7 +85,7 @@ Partial Class FormRegion1
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.LimeGreen
+        Me.Button2.BackColor = System.Drawing.Color.LightGreen
         Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Button2.Location = New System.Drawing.Point(63, 3)
         Me.Button2.Name = "Button2"
@@ -163,6 +163,24 @@ Partial Class FormRegion1
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(217, 29)
         Me.TableLayoutPanel2.TabIndex = 7
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(28, 29)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Terv"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Location = New System.Drawing.Point(37, 3)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 18)
+        Me.NumericUpDown1.TabIndex = 1
+        '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.ColumnCount = 2
@@ -178,17 +196,6 @@ Partial Class FormRegion1
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(217, 30)
         Me.TableLayoutPanel3.TabIndex = 8
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(28, 29)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Terv"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -199,13 +206,6 @@ Partial Class FormRegion1
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Tény"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(37, 3)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 18)
-        Me.NumericUpDown1.TabIndex = 1
         '
         'NumericUpDown2
         '
@@ -225,9 +225,9 @@ Partial Class FormRegion1
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
