@@ -157,12 +157,12 @@ Namespace My.Resources
         '''  Looks up a localized string similar to &lt;!-- start ReportMainTableFEnd --&gt;
         '''&lt;tr&gt;
         '''&lt;td class=&quot;m07&quot; colspan=&quot;3&quot;&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;m05&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;m05&quot;&gt;a&lt;strong&gt;lma&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;m05&quot;&gt;&lt;strong&gt;[LEFT1]&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;m05&quot;&gt;&lt;strong&gt;[LEFT2]&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;m05&quot;&gt;&amp;nbsp;&lt;/td&gt;
         '''&lt;td class=&quot;m08&quot; colspan=&quot;3&quot;&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;m06&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;m06&quot;&gt;a&lt;strong&gt;lma&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;m06&quot;&gt;&lt;strong&gt;[RIGHT1]&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;m06&quot;&gt;&lt;strong&gt;[RIGHT2]&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;m06&quot;&gt;&amp;nbsp;&lt;/td&gt;
         '''&lt;/tr&gt;
         '''&lt;!-- end ReportMainTableFEnd --&gt;.
@@ -176,18 +176,18 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized string similar to &lt;!-- start ReportMainTableFRow --&gt;
         '''&lt;tr&gt;
-        '''&lt;td class=&quot;m04&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m05&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m05&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m05&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m05&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m05&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m06&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m06&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m06&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m06&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m06&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m06&quot;&gt;alma&lt;/td&gt;
+        '''&lt;td class=&quot;m04&quot;&gt;[LEFT1]&lt;/td&gt;
+        '''&lt;td class=&quot;m05&quot;&gt;[LEFT2]&lt;/td&gt;
+        '''&lt;td class=&quot;m05&quot;&gt;[LEFT3]&lt;/td&gt;
+        '''&lt;td class=&quot;m05&quot;&gt;[LEFT4]&lt;/td&gt;
+        '''&lt;td class=&quot;m05&quot;&gt;[LEFT5]&lt;/td&gt;
+        '''&lt;td class=&quot;m05&quot;&gt;[LEFT6]&lt;/td&gt;
+        '''&lt;td class=&quot;m06&quot;&gt;[RIGHT1]&lt;/td&gt;
+        '''&lt;td class=&quot;m06&quot;&gt;[RIGHT2]&lt;/td&gt;
+        '''&lt;td class=&quot;m06&quot;&gt;[RIGHT3]&lt;/td&gt;
+        '''&lt;td class=&quot;m06&quot;&gt;[RIGHT4]&lt;/td&gt;
+        '''&lt;td class=&quot;m06&quot;&gt;[RIGHT5]&lt;/td&gt;
+        '''&lt;td class=&quot;m06&quot;&gt;[RIGHT6]&lt;/td&gt;
         '''&lt;/tr&gt;
         '''&lt;!-- end ReportMainTableFRow --&gt;.
         '''</summary>
@@ -226,12 +226,12 @@ Namespace My.Resources
         '''  Looks up a localized string similar to &lt;!-- start ReportMainTableNFEnd --&gt;
         '''&lt;tr&gt;
         '''&lt;td class=&quot;m15&quot; colspan=&quot;3&quot;&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;m13&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;m13&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;m13&quot;&gt;&lt;strong&gt;[LEFT1]&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;m13&quot;&gt;&lt;strong&gt;[LEFT2]&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;m13&quot;&gt;&amp;nbsp;&lt;/td&gt;
         '''&lt;td class=&quot;m16&quot; colspan=&quot;3&quot;&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;m14&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;m14&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;m14&quot;&gt;&lt;strong&gt;[RIGHT1]&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;m14&quot;&gt;&lt;strong&gt;[RIGHT2]&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;m14&quot;&gt;&amp;nbsp;&lt;/td&gt;
         '''&lt;/tr&gt;
         '''&lt;!-- end ReportMainTableNFEnd --&gt;.
@@ -245,18 +245,18 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized string similar to &lt;!-- start ReportMainTableNFRow --&gt;
         '''&lt;tr&gt;
-        '''&lt;td class=&quot;m12&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m13&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m13&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m13&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m13&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m13&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m14&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m14&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m14&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m14&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m14&quot;&gt;alma&lt;/td&gt;
-        '''&lt;td class=&quot;m14&quot;&gt;alma&lt;/td&gt;
+        '''&lt;td class=&quot;m12&quot;&gt;[LEFT1]&lt;/td&gt;
+        '''&lt;td class=&quot;m13&quot;&gt;[LEFT2]&lt;/td&gt;
+        '''&lt;td class=&quot;m13&quot;&gt;[LEFT3]&lt;/td&gt;
+        '''&lt;td class=&quot;m13&quot;&gt;[LEFT4]&lt;/td&gt;
+        '''&lt;td class=&quot;m13&quot;&gt;[LEFT5]&lt;/td&gt;
+        '''&lt;td class=&quot;m13&quot;&gt;[LEFT6]&lt;/td&gt;
+        '''&lt;td class=&quot;m14&quot;&gt;[RIGHT1]&lt;/td&gt;
+        '''&lt;td class=&quot;m14&quot;&gt;[RIGHT2]&lt;/td&gt;
+        '''&lt;td class=&quot;m14&quot;&gt;[RIGHT3]&lt;/td&gt;
+        '''&lt;td class=&quot;m14&quot;&gt;[RIGHT4]&lt;/td&gt;
+        '''&lt;td class=&quot;m14&quot;&gt;[RIGHT5]&lt;/td&gt;
+        '''&lt;td class=&quot;m14&quot;&gt;[RIGHT6]&lt;/td&gt;
         '''&lt;/tr&gt;
         '''&lt;!-- end ReportMainTableNFRow --&gt;.
         '''</summary>
@@ -395,23 +395,22 @@ Namespace My.Resources
         '''&lt;table  cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;30%&quot;&gt;
         '''&lt;tr &gt;
         '''&lt;td class=&quot;ossz01&quot;&gt;NEM SÜRGŐS - FONTOS&lt;/td&gt;
-        '''&lt;td class=&quot;ossz02&quot;&gt;999&lt;/td&gt;
-        '''&lt;td class=&quot;ossz03&quot;&gt;888&lt;/td&gt;
+        '''&lt;td class=&quot;ossz02&quot;&gt;[SUMNSF1]&lt;/td&gt;
+        '''&lt;td class=&quot;ossz03&quot;&gt;[SUMNSF2]&lt;/td&gt;
         '''&lt;/tr&gt;
         '''
         '''&lt;tr &gt;
         '''&lt;td class=&quot;ossz04&quot;&gt;SÜRGŐS - FONTOS&lt;/td&gt;
-        '''&lt;td class=&quot;ossz05&quot;&gt;999&lt;/td&gt;
-        '''&lt;td class=&quot;ossz06&quot;&gt;888&lt;/td&gt;
+        '''&lt;td class=&quot;ossz05&quot;&gt;[SUMSF1]&lt;/td&gt;
+        '''&lt;td class=&quot;ossz06&quot;&gt;[SUMSF2]&lt;/td&gt;
         '''&lt;/tr&gt;
         '''&lt;tr &gt;
         '''&lt;td class=&quot;auto-style3&quot;&gt;SÜRGŐS - NEM FONTOS&lt;/td&gt;
-        '''&lt;td class=&quot;m12&quot;&gt;999&lt;/td&gt;
-        '''&lt;td class=&quot;m13&quot;&gt;888&lt;/td&gt;
+        '''&lt;td class=&quot;m12&quot;&gt;[SUMSNF1]&lt;/td&gt;
+        '''&lt;td class=&quot;m13&quot;&gt;[SUMSNF2]&lt;/td&gt;
         '''&lt;/tr&gt;
         '''&lt;tr &gt;
-        '''&lt;td class=&quot;auto-style5&quot; &gt;NEM SÜRGŐS - NEM FONTOS&lt;/td&gt;
-        '''&lt;td class=&quot;auto-s [rest of string was truncated]&quot;;.
+        '''&lt;td class=&quot;auto-style5&quot; &gt;NEM SÜRGŐS -  [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property ReportSumTable() As String
             Get

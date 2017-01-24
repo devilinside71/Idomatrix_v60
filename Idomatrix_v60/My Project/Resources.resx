@@ -154,10 +154,10 @@
 		&lt;td colspan="4"&gt;Terv:&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
-		&lt;td class="evalreal02" style="width: 25%"&gt;25%&lt;/td&gt;
-		&lt;td class="evalreal03" style="width: 25%"&gt;25%&lt;/td&gt;
-		&lt;td class="evalreal04" style="width: 25%"&gt;25%&lt;/td&gt;
-		&lt;td class="evalreal05" style="width: 25%"&gt;25%&lt;/td&gt;
+		&lt;td class="evalreal02" style="width: [EVAL1]%"&gt;[EVAL1]%&lt;/td&gt;
+		&lt;td class="evalreal03" style="width: [EVAL2]%"&gt;[EVAL2]%&lt;/td&gt;
+		&lt;td class="evalreal04" style="width: [EVAL3]%"&gt;[EVAL3]%&lt;/td&gt;
+		&lt;td class="evalreal05" style="width: [EVAL4]%"&gt;[EVAL4]%&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;table cellpadding="0" cellspacing="0" class="evalreal01" style="width: 40%"&gt;
@@ -165,10 +165,10 @@
 		&lt;td colspan="4"&gt;Tény:&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
-		&lt;td class="evalreal02" style="width: 25%"&gt;25%&lt;/td&gt;
-		&lt;td class="evalreal03" style="width: 25%"&gt;25%&lt;/td&gt;
-		&lt;td class="evalreal04" style="width: 25%"&gt;25%&lt;/td&gt;
-		&lt;td class="evalreal05" style="width: 25%"&gt;25%&lt;/td&gt;
+		&lt;td class="evalreal02" style="width: [EVAL5]%"&gt;[EVAL5]%&lt;/td&gt;
+		&lt;td class="evalreal03" style="width: [EVAL6]%"&gt;[EVAL6]%&lt;/td&gt;
+		&lt;td class="evalreal04" style="width: [EVAL7]%"&gt;[EVAL7]%&lt;/td&gt;
+		&lt;td class="evalreal05" style="width: [EVAL8]%"&gt;[EVAL8]%&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 
@@ -191,12 +191,12 @@
     <value>&lt;!-- start ReportMainTableFEnd --&gt;
 &lt;tr&gt;
 &lt;td class="m07" colspan="3"&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
-&lt;td class="m05"&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
-&lt;td class="m05"&gt;a&lt;strong&gt;lma&lt;/strong&gt;&lt;/td&gt;
+&lt;td class="m05"&gt;&lt;strong&gt;[LEFT1]&lt;/strong&gt;&lt;/td&gt;
+&lt;td class="m05"&gt;&lt;strong&gt;[LEFT2]&lt;/strong&gt;&lt;/td&gt;
 &lt;td class="m05"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td class="m08" colspan="3"&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
-&lt;td class="m06"&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
-&lt;td class="m06"&gt;a&lt;strong&gt;lma&lt;/strong&gt;&lt;/td&gt;
+&lt;td class="m06"&gt;&lt;strong&gt;[RIGHT1]&lt;/strong&gt;&lt;/td&gt;
+&lt;td class="m06"&gt;&lt;strong&gt;[RIGHT2]&lt;/strong&gt;&lt;/td&gt;
 &lt;td class="m06"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;!-- end ReportMainTableFEnd --&gt;</value>
@@ -204,18 +204,18 @@
   <data name="ReportMainTableFRow" xml:space="preserve">
     <value>&lt;!-- start ReportMainTableFRow --&gt;
 &lt;tr&gt;
-&lt;td class="m04"&gt;alma&lt;/td&gt;
-&lt;td class="m05"&gt;alma&lt;/td&gt;
-&lt;td class="m05"&gt;alma&lt;/td&gt;
-&lt;td class="m05"&gt;alma&lt;/td&gt;
-&lt;td class="m05"&gt;alma&lt;/td&gt;
-&lt;td class="m05"&gt;alma&lt;/td&gt;
-&lt;td class="m06"&gt;alma&lt;/td&gt;
-&lt;td class="m06"&gt;alma&lt;/td&gt;
-&lt;td class="m06"&gt;alma&lt;/td&gt;
-&lt;td class="m06"&gt;alma&lt;/td&gt;
-&lt;td class="m06"&gt;alma&lt;/td&gt;
-&lt;td class="m06"&gt;alma&lt;/td&gt;
+&lt;td class="m04"&gt;[LEFT1]&lt;/td&gt;
+&lt;td class="m05"&gt;[LEFT2]&lt;/td&gt;
+&lt;td class="m05"&gt;[LEFT3]&lt;/td&gt;
+&lt;td class="m05"&gt;[LEFT4]&lt;/td&gt;
+&lt;td class="m05"&gt;[LEFT5]&lt;/td&gt;
+&lt;td class="m05"&gt;[LEFT6]&lt;/td&gt;
+&lt;td class="m06"&gt;[RIGHT1]&lt;/td&gt;
+&lt;td class="m06"&gt;[RIGHT2]&lt;/td&gt;
+&lt;td class="m06"&gt;[RIGHT3]&lt;/td&gt;
+&lt;td class="m06"&gt;[RIGHT4]&lt;/td&gt;
+&lt;td class="m06"&gt;[RIGHT5]&lt;/td&gt;
+&lt;td class="m06"&gt;[RIGHT6]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;!-- end ReportMainTableFRow --&gt;</value>
   </data>
@@ -259,12 +259,12 @@ S&lt;/strong&gt;&lt;/td&gt;
     <value>&lt;!-- start ReportMainTableNFEnd --&gt;
 &lt;tr&gt;
 &lt;td class="m15" colspan="3"&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
-&lt;td class="m13"&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
-&lt;td class="m13"&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
+&lt;td class="m13"&gt;&lt;strong&gt;[LEFT1]&lt;/strong&gt;&lt;/td&gt;
+&lt;td class="m13"&gt;&lt;strong&gt;[LEFT2]&lt;/strong&gt;&lt;/td&gt;
 &lt;td class="m13"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td class="m16" colspan="3"&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
-&lt;td class="m14"&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
-&lt;td class="m14"&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
+&lt;td class="m14"&gt;&lt;strong&gt;[RIGHT1]&lt;/strong&gt;&lt;/td&gt;
+&lt;td class="m14"&gt;&lt;strong&gt;[RIGHT2]&lt;/strong&gt;&lt;/td&gt;
 &lt;td class="m14"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;!-- end ReportMainTableNFEnd --&gt;</value>
@@ -272,18 +272,18 @@ S&lt;/strong&gt;&lt;/td&gt;
   <data name="ReportMainTableNFRow" xml:space="preserve">
     <value>&lt;!-- start ReportMainTableNFRow --&gt;
 &lt;tr&gt;
-&lt;td class="m12"&gt;alma&lt;/td&gt;
-&lt;td class="m13"&gt;alma&lt;/td&gt;
-&lt;td class="m13"&gt;alma&lt;/td&gt;
-&lt;td class="m13"&gt;alma&lt;/td&gt;
-&lt;td class="m13"&gt;alma&lt;/td&gt;
-&lt;td class="m13"&gt;alma&lt;/td&gt;
-&lt;td class="m14"&gt;alma&lt;/td&gt;
-&lt;td class="m14"&gt;alma&lt;/td&gt;
-&lt;td class="m14"&gt;alma&lt;/td&gt;
-&lt;td class="m14"&gt;alma&lt;/td&gt;
-&lt;td class="m14"&gt;alma&lt;/td&gt;
-&lt;td class="m14"&gt;alma&lt;/td&gt;
+&lt;td class="m12"&gt;[LEFT1]&lt;/td&gt;
+&lt;td class="m13"&gt;[LEFT2]&lt;/td&gt;
+&lt;td class="m13"&gt;[LEFT3]&lt;/td&gt;
+&lt;td class="m13"&gt;[LEFT4]&lt;/td&gt;
+&lt;td class="m13"&gt;[LEFT5]&lt;/td&gt;
+&lt;td class="m13"&gt;[LEFT6]&lt;/td&gt;
+&lt;td class="m14"&gt;[RIGHT1]&lt;/td&gt;
+&lt;td class="m14"&gt;[RIGHT2]&lt;/td&gt;
+&lt;td class="m14"&gt;[RIGHT3]&lt;/td&gt;
+&lt;td class="m14"&gt;[RIGHT4]&lt;/td&gt;
+&lt;td class="m14"&gt;[RIGHT5]&lt;/td&gt;
+&lt;td class="m14"&gt;[RIGHT6]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;!-- end ReportMainTableNFRow --&gt;</value>
   </data>
@@ -913,30 +913,30 @@ S&lt;/strong&gt;&lt;/td&gt;
 &lt;table  cellpadding="0" cellspacing="0" width="30%"&gt;
 &lt;tr &gt;
 &lt;td class="ossz01"&gt;NEM SÜRGŐS - FONTOS&lt;/td&gt;
-&lt;td class="ossz02"&gt;999&lt;/td&gt;
-&lt;td class="ossz03"&gt;888&lt;/td&gt;
+&lt;td class="ossz02"&gt;[SUMNSF1]&lt;/td&gt;
+&lt;td class="ossz03"&gt;[SUMNSF2]&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr &gt;
 &lt;td class="ossz04"&gt;SÜRGŐS - FONTOS&lt;/td&gt;
-&lt;td class="ossz05"&gt;999&lt;/td&gt;
-&lt;td class="ossz06"&gt;888&lt;/td&gt;
+&lt;td class="ossz05"&gt;[SUMSF1]&lt;/td&gt;
+&lt;td class="ossz06"&gt;[SUMSF2]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr &gt;
 &lt;td class="auto-style3"&gt;SÜRGŐS - NEM FONTOS&lt;/td&gt;
-&lt;td class="m12"&gt;999&lt;/td&gt;
-&lt;td class="m13"&gt;888&lt;/td&gt;
+&lt;td class="m12"&gt;[SUMSNF1]&lt;/td&gt;
+&lt;td class="m13"&gt;[SUMSNF2]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr &gt;
 &lt;td class="auto-style5" &gt;NEM SÜRGŐS - NEM FONTOS&lt;/td&gt;
-&lt;td class="auto-style4"&gt;999&lt;/td&gt;
-&lt;td class="m14" &gt;888&lt;/td&gt;
+&lt;td class="auto-style4"&gt;[SUMNSNF1]&lt;/td&gt;
+&lt;td class="m14" &gt;[SUMNSNF2]&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td class="auto-style8"&gt;ÖSSZ&lt;/td&gt;
-&lt;td class="auto-style7"&gt;999&lt;/td&gt;
-&lt;td class="auto-style6"&gt;888&lt;/td&gt;
+&lt;td class="auto-style7"&gt;[SUM1]&lt;/td&gt;
+&lt;td class="auto-style6"&gt;[SUM2]&lt;/td&gt;
 &lt;/tr&gt;
 
 

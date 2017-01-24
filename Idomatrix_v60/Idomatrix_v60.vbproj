@@ -288,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Matrixv_Full02.html" />
+    <Content Include="Matrixv_Full02_Edit.html" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
