@@ -128,13 +128,13 @@ Public Class IGMPane
         Call SetTasksInRange()
         Call SetAppointmentsInRange()
 
+        Label10.Text = resultNSF.ToString
         Label11.Text = resultSF.ToString
-        Label10.Text = resultSNF.ToString
-        Label12.Text = resultNSF.ToString
+        Label12.Text = resultSNF.ToString
         Label13.Text = resultNSNF.ToString
+        Label15.Text = Math.Round(resultNSF / 60, 2)
         Label16.Text = Math.Round(resultSF / 60, 2)
-        Label15.Text = Math.Round(resultSNF / 60, 2)
-        Label17.Text = Math.Round(resultNSF / 60, 2)
+        Label17.Text = Math.Round(resultSNF / 60, 2)
         Label18.Text = Math.Round(resultNSNF / 60, 2)
         Label20.Text = resultT_NSF.ToString
         Label21.Text = resultT_SF.ToString

@@ -238,6 +238,7 @@
     <EmbeddedResource Include="SelectNewItemForm.resx">
       <DependentUpon>SelectNewItemForm.vb</DependentUpon>
     </EmbeddedResource>
+    <None Include="Idomatrix_v60_1_TemporaryKey.pfx" />
     <None Include="Idomatrix_v60_TemporaryKey.pfx" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.vb</DependentUpon>
@@ -302,10 +303,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Idomatrix_v60_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Idomatrix_v60_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>2C59A7FBEDC9C63C84AC139EB18713839D3638F7</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>69A54132B9D89251C0A0712E8B7D04BAEB0A9BA1</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a Visual Basic project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
