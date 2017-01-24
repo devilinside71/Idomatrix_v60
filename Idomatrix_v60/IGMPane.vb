@@ -52,7 +52,7 @@ Public Class IGMPane
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MessageBox.Show("RIPORT")
+        Call SendReport()
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
@@ -76,7 +76,7 @@ Public Class IGMPane
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-
+        Call SendReport()
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
@@ -247,11 +247,13 @@ Me.TableLayoutPanel14.ColumnStyles
                             resultMin = GetMinutes(appt.Start, appt.End)
                             .SubItems.Add(resultMin)
                             resultSF = resultSF + CDbl(resultMin)
-                            Dim tervTeny As String() = Split(appt.Companies, "@")
-                            .SubItems.Add(tervTeny(1))
+
                             Try
+                                Dim tervTeny As String() = Split(appt.Companies, "@")
+                                .SubItems.Add(tervTeny(1))
                                 resultT_SF = resultT_SF + CDbl(tervTeny(1))
                             Catch ex As Exception
+                                .SubItems.Add("")
                             End Try
                             .SubItems.Add("")
                         End With
@@ -264,11 +266,12 @@ Me.TableLayoutPanel14.ColumnStyles
                             resultMin = GetMinutes(appt.Start, appt.End)
                             .SubItems.Add(resultMin)
                             resultSNF = resultSNF + CDbl(resultMin)
-                            Dim tervTeny As String() = Split(appt.Companies, "@")
-                            .SubItems.Add(tervTeny(1))
                             Try
+                                Dim tervTeny As String() = Split(appt.Companies, "@")
+                                .SubItems.Add(tervTeny(1))
                                 resultT_SNF = resultT_SNF + CDbl(tervTeny(1))
                             Catch ex As Exception
+                                .SubItems.Add("")
                             End Try
                             .SubItems.Add("")
                         End With
@@ -281,11 +284,12 @@ Me.TableLayoutPanel14.ColumnStyles
                             resultMin = GetMinutes(appt.Start, appt.End)
                             .SubItems.Add(resultMin)
                             resultNSF = resultNSF + CDbl(resultMin)
-                            Dim tervTeny As String() = Split(appt.Companies, "@")
-                            .SubItems.Add(tervTeny(1))
                             Try
+                                Dim tervTeny As String() = Split(appt.Companies, "@")
+                                .SubItems.Add(tervTeny(1))
                                 resultT_NSF = resultT_NSF + CDbl(tervTeny(1))
                             Catch ex As Exception
+                                .SubItems.Add("")
                             End Try
                             .SubItems.Add("")
                         End With
@@ -298,11 +302,12 @@ Me.TableLayoutPanel14.ColumnStyles
                             resultMin = GetMinutes(appt.Start, appt.End)
                             .SubItems.Add(resultMin)
                             resultNSNF = resultNSNF + CDbl(resultMin)
-                            Dim tervTeny As String() = Split(appt.Companies, "@")
-                            .SubItems.Add(tervTeny(1))
                             Try
+                                Dim tervTeny As String() = Split(appt.Companies, "@")
+                                .SubItems.Add(tervTeny(1))
                                 resultT_NSNF = resultT_NSNF + CDbl(tervTeny(1))
                             Catch ex As Exception
+                                .SubItems.Add("")
                             End Try
                             .SubItems.Add("")
                         End With
@@ -979,7 +984,7 @@ Me.TableLayoutPanel14.ColumnStyles
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-
+        Call SendReport()
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click

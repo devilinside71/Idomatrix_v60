@@ -90,8 +90,6 @@ Partial Class IGMPane
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button9 = New System.Windows.Forms.Button()
@@ -127,26 +125,28 @@ Partial Class IGMPane
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel12 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel13 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel14 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel15 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel14 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel12 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel15 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -161,10 +161,10 @@ Partial Class IGMPane
         Me.TableLayoutPanel8.SuspendLayout()
         Me.TableLayoutPanel9.SuspendLayout()
         Me.TableLayoutPanel10.SuspendLayout()
-        Me.TableLayoutPanel11.SuspendLayout()
-        Me.TableLayoutPanel12.SuspendLayout()
         Me.TableLayoutPanel13.SuspendLayout()
+        Me.TableLayoutPanel11.SuspendLayout()
         Me.TableLayoutPanel14.SuspendLayout()
+        Me.TableLayoutPanel12.SuspendLayout()
         Me.TableLayoutPanel15.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -716,24 +716,6 @@ Partial Class IGMPane
         Me.TabPage3.Text = "Statisztika"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'TabPage4
-        '
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(324, 374)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "X"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'TabPage5
-        '
-        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(324, 374)
-        Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "X"
-        Me.TabPage5.UseVisualStyleBackColor = True
-        '
         'TableLayoutPanel7
         '
         Me.TableLayoutPanel7.ColumnCount = 1
@@ -770,7 +752,7 @@ Partial Class IGMPane
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 1
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
         Me.TableLayoutPanel8.Size = New System.Drawing.Size(318, 31)
         Me.TableLayoutPanel8.TabIndex = 0
         '
@@ -1212,36 +1194,6 @@ Partial Class IGMPane
         Me.TableLayoutPanel10.Size = New System.Drawing.Size(318, 43)
         Me.TableLayoutPanel10.TabIndex = 2
         '
-        'TableLayoutPanel11
-        '
-        Me.TableLayoutPanel11.ColumnCount = 1
-        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel11.Controls.Add(Me.TableLayoutPanel14, 0, 1)
-        Me.TableLayoutPanel11.Controls.Add(Me.Label31, 0, 0)
-        Me.TableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel11.Location = New System.Drawing.Point(3, 277)
-        Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
-        Me.TableLayoutPanel11.RowCount = 2
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel11.Size = New System.Drawing.Size(318, 43)
-        Me.TableLayoutPanel11.TabIndex = 3
-        '
-        'TableLayoutPanel12
-        '
-        Me.TableLayoutPanel12.ColumnCount = 1
-        Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel12.Controls.Add(Me.TableLayoutPanel15, 0, 1)
-        Me.TableLayoutPanel12.Controls.Add(Me.Label32, 0, 0)
-        Me.TableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel12.Location = New System.Drawing.Point(3, 326)
-        Me.TableLayoutPanel12.Name = "TableLayoutPanel12"
-        Me.TableLayoutPanel12.RowCount = 2
-        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel12.Size = New System.Drawing.Size(318, 45)
-        Me.TableLayoutPanel12.TabIndex = 4
-        '
         'TableLayoutPanel13
         '
         Me.TableLayoutPanel13.ColumnCount = 4
@@ -1260,75 +1212,6 @@ Partial Class IGMPane
         Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel13.Size = New System.Drawing.Size(312, 16)
         Me.TableLayoutPanel13.TabIndex = 0
-        '
-        'TableLayoutPanel14
-        '
-        Me.TableLayoutPanel14.ColumnCount = 4
-        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel14.Controls.Add(Me.Label37, 0, 0)
-        Me.TableLayoutPanel14.Controls.Add(Me.Label38, 1, 0)
-        Me.TableLayoutPanel14.Controls.Add(Me.Label39, 2, 0)
-        Me.TableLayoutPanel14.Controls.Add(Me.Label40, 3, 0)
-        Me.TableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel14.Location = New System.Drawing.Point(3, 24)
-        Me.TableLayoutPanel14.Name = "TableLayoutPanel14"
-        Me.TableLayoutPanel14.RowCount = 1
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel14.Size = New System.Drawing.Size(312, 16)
-        Me.TableLayoutPanel14.TabIndex = 0
-        '
-        'TableLayoutPanel15
-        '
-        Me.TableLayoutPanel15.ColumnCount = 4
-        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel15.Controls.Add(Me.Label41, 0, 0)
-        Me.TableLayoutPanel15.Controls.Add(Me.Label42, 1, 0)
-        Me.TableLayoutPanel15.Controls.Add(Me.Label43, 2, 0)
-        Me.TableLayoutPanel15.Controls.Add(Me.Label44, 3, 0)
-        Me.TableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel15.Location = New System.Drawing.Point(3, 25)
-        Me.TableLayoutPanel15.Name = "TableLayoutPanel15"
-        Me.TableLayoutPanel15.RowCount = 1
-        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel15.Size = New System.Drawing.Size(312, 17)
-        Me.TableLayoutPanel15.TabIndex = 0
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label30.Location = New System.Drawing.Point(3, 8)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(312, 13)
-        Me.Label30.TabIndex = 1
-        Me.Label30.Text = "Optimálishoz közeli eloszlás:"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label31.Location = New System.Drawing.Point(3, 8)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(312, 13)
-        Me.Label31.TabIndex = 1
-        Me.Label31.Text = "Terv:"
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label32.Location = New System.Drawing.Point(3, 9)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(312, 13)
-        Me.Label32.TabIndex = 1
-        Me.Label32.Text = "Tény:"
         '
         'Label33
         '
@@ -1378,6 +1261,50 @@ Partial Class IGMPane
         Me.Label36.Text = "12%"
         Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label30.Location = New System.Drawing.Point(3, 8)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(312, 13)
+        Me.Label30.TabIndex = 1
+        Me.Label30.Text = "Optimálishoz közeli eloszlás:"
+        '
+        'TableLayoutPanel11
+        '
+        Me.TableLayoutPanel11.ColumnCount = 1
+        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel11.Controls.Add(Me.TableLayoutPanel14, 0, 1)
+        Me.TableLayoutPanel11.Controls.Add(Me.Label31, 0, 0)
+        Me.TableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel11.Location = New System.Drawing.Point(3, 277)
+        Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
+        Me.TableLayoutPanel11.RowCount = 2
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel11.Size = New System.Drawing.Size(318, 43)
+        Me.TableLayoutPanel11.TabIndex = 3
+        '
+        'TableLayoutPanel14
+        '
+        Me.TableLayoutPanel14.ColumnCount = 4
+        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel14.Controls.Add(Me.Label37, 0, 0)
+        Me.TableLayoutPanel14.Controls.Add(Me.Label38, 1, 0)
+        Me.TableLayoutPanel14.Controls.Add(Me.Label39, 2, 0)
+        Me.TableLayoutPanel14.Controls.Add(Me.Label40, 3, 0)
+        Me.TableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel14.Location = New System.Drawing.Point(3, 24)
+        Me.TableLayoutPanel14.Name = "TableLayoutPanel14"
+        Me.TableLayoutPanel14.RowCount = 1
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel14.Size = New System.Drawing.Size(312, 16)
+        Me.TableLayoutPanel14.TabIndex = 0
+        '
         'Label37
         '
         Me.Label37.AutoSize = True
@@ -1425,6 +1352,51 @@ Partial Class IGMPane
         Me.Label40.TabIndex = 3
         Me.Label40.Text = "Label40"
         Me.Label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label31.Location = New System.Drawing.Point(3, 8)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(312, 13)
+        Me.Label31.TabIndex = 1
+        Me.Label31.Text = "Terv:"
+        '
+        'TableLayoutPanel12
+        '
+        Me.TableLayoutPanel12.ColumnCount = 1
+        Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel12.Controls.Add(Me.TableLayoutPanel15, 0, 1)
+        Me.TableLayoutPanel12.Controls.Add(Me.Label32, 0, 0)
+        Me.TableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel12.Location = New System.Drawing.Point(3, 326)
+        Me.TableLayoutPanel12.Name = "TableLayoutPanel12"
+        Me.TableLayoutPanel12.RowCount = 2
+        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel12.Size = New System.Drawing.Size(318, 45)
+        Me.TableLayoutPanel12.TabIndex = 4
+        '
+        'TableLayoutPanel15
+        '
+        Me.TableLayoutPanel15.ColumnCount = 4
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel15.Controls.Add(Me.Label41, 0, 0)
+        Me.TableLayoutPanel15.Controls.Add(Me.Label42, 1, 0)
+        Me.TableLayoutPanel15.Controls.Add(Me.Label43, 2, 0)
+        Me.TableLayoutPanel15.Controls.Add(Me.Label44, 3, 0)
+        Me.TableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel15.Location = New System.Drawing.Point(3, 25)
+        Me.TableLayoutPanel15.Name = "TableLayoutPanel15"
+        Me.TableLayoutPanel15.RowCount = 1
+        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17.0!))
+        Me.TableLayoutPanel15.Size = New System.Drawing.Size(312, 17)
+        Me.TableLayoutPanel15.TabIndex = 0
         '
         'Label41
         '
@@ -1474,6 +1446,34 @@ Partial Class IGMPane
         Me.Label44.Text = "Label44"
         Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label32.Location = New System.Drawing.Point(3, 9)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(312, 13)
+        Me.Label32.TabIndex = 1
+        Me.Label32.Text = "Tény:"
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Size = New System.Drawing.Size(324, 374)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "X"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Size = New System.Drawing.Size(324, 374)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "X"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
         'IGMPane
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1497,14 +1497,14 @@ Partial Class IGMPane
         Me.TableLayoutPanel9.PerformLayout()
         Me.TableLayoutPanel10.ResumeLayout(False)
         Me.TableLayoutPanel10.PerformLayout()
-        Me.TableLayoutPanel11.ResumeLayout(False)
-        Me.TableLayoutPanel11.PerformLayout()
-        Me.TableLayoutPanel12.ResumeLayout(False)
-        Me.TableLayoutPanel12.PerformLayout()
         Me.TableLayoutPanel13.ResumeLayout(False)
         Me.TableLayoutPanel13.PerformLayout()
+        Me.TableLayoutPanel11.ResumeLayout(False)
+        Me.TableLayoutPanel11.PerformLayout()
         Me.TableLayoutPanel14.ResumeLayout(False)
         Me.TableLayoutPanel14.PerformLayout()
+        Me.TableLayoutPanel12.ResumeLayout(False)
+        Me.TableLayoutPanel12.PerformLayout()
         Me.TableLayoutPanel15.ResumeLayout(False)
         Me.TableLayoutPanel15.PerformLayout()
         Me.ResumeLayout(False)
