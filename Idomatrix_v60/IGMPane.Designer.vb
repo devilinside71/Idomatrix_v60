@@ -147,7 +147,6 @@ Partial Class IGMPane
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel17 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label45 = New System.Windows.Forms.Label()
@@ -161,6 +160,7 @@ Partial Class IGMPane
         Me.Label51 = New System.Windows.Forms.Label()
         Me.Label52 = New System.Windows.Forms.Label()
         Me.Label53 = New System.Windows.Forms.Label()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -1485,15 +1485,6 @@ Partial Class IGMPane
         Me.TabPage4.Text = "Súgó"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'TabPage5
-        '
-        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(324, 374)
-        Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "X"
-        Me.TabPage5.UseVisualStyleBackColor = True
-        '
         'TableLayoutPanel16
         '
         Me.TableLayoutPanel16.ColumnCount = 1
@@ -1616,7 +1607,7 @@ Partial Class IGMPane
         Me.TableLayoutPanel19.Name = "TableLayoutPanel19"
         Me.TableLayoutPanel19.RowCount = 1
         Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18.0!))
         Me.TableLayoutPanel19.Size = New System.Drawing.Size(312, 18)
         Me.TableLayoutPanel19.TabIndex = 1
         '
@@ -1667,6 +1658,15 @@ Partial Class IGMPane
         Me.Label53.TabIndex = 3
         Me.Label53.Text = "12%"
         Me.Label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Size = New System.Drawing.Size(324, 374)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "X"
+        Me.TabPage5.UseVisualStyleBackColor = True
         '
         'IGMPane
         '
