@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label45.Text" xml:space="preserve">
+    <value>SÜRGŐS-FONTOS
+
+határidős munkák
+kritikus helyzetek
+égető problémák
+válság vagy probléma kezelés
+azonnali beavatkozás, napi mb., vez., 
+jelentés, összefoglaló készítés
+levelezés, mail
+szüks. adminisztráció</value>
+  </data>
+  <data name="Label46.Text" xml:space="preserve">
+    <value>NEM SÜRGŐS-FONTOS
+
+tervezés (napi, heti, havi, éves)
+szervezés jövőbeli eseményre
+vezetés(befolyásolás, motiválás)
+ellenőrzés, értékelés 
+új lehetőség keresés
+kapcsolatépítés
+fejlődés, tanulás, önfejlesztés
+érdemi megbesz., tárgyalás, mail, tel.
+megelőzni nem kívánt eseményt</value>
+  </data>
 </root>

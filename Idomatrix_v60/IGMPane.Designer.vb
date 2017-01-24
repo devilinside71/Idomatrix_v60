@@ -22,6 +22,7 @@ Partial Class IGMPane
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IGMPane))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -147,6 +148,19 @@ Partial Class IGMPane
         Me.Label32 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel17 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel18 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel19 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -166,6 +180,11 @@ Partial Class IGMPane
         Me.TableLayoutPanel14.SuspendLayout()
         Me.TableLayoutPanel12.SuspendLayout()
         Me.TableLayoutPanel15.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        Me.TableLayoutPanel16.SuspendLayout()
+        Me.TableLayoutPanel17.SuspendLayout()
+        Me.TableLayoutPanel18.SuspendLayout()
+        Me.TableLayoutPanel19.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -1458,6 +1477,7 @@ Partial Class IGMPane
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.TableLayoutPanel16)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(324, 374)
@@ -1473,6 +1493,180 @@ Partial Class IGMPane
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "X"
         Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel16
+        '
+        Me.TableLayoutPanel16.ColumnCount = 1
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel16.Controls.Add(Me.TableLayoutPanel17, 0, 0)
+        Me.TableLayoutPanel16.Controls.Add(Me.TableLayoutPanel18, 0, 1)
+        Me.TableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel16.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel16.Name = "TableLayoutPanel16"
+        Me.TableLayoutPanel16.RowCount = 2
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.47059!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.52941!))
+        Me.TableLayoutPanel16.Size = New System.Drawing.Size(324, 374)
+        Me.TableLayoutPanel16.TabIndex = 0
+        '
+        'TableLayoutPanel17
+        '
+        Me.TableLayoutPanel17.ColumnCount = 2
+        Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel17.Controls.Add(Me.Label45, 0, 0)
+        Me.TableLayoutPanel17.Controls.Add(Me.Label46, 1, 0)
+        Me.TableLayoutPanel17.Controls.Add(Me.Label47, 0, 1)
+        Me.TableLayoutPanel17.Controls.Add(Me.Label48, 1, 1)
+        Me.TableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel17.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel17.Name = "TableLayoutPanel17"
+        Me.TableLayoutPanel17.RowCount = 2
+        Me.TableLayoutPanel17.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel17.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel17.Size = New System.Drawing.Size(318, 280)
+        Me.TableLayoutPanel17.TabIndex = 0
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Label45.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label45.Location = New System.Drawing.Point(3, 0)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(153, 140)
+        Me.Label45.TabIndex = 0
+        Me.Label45.Text = resources.GetString("Label45.Text")
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.BackColor = System.Drawing.Color.LightGreen
+        Me.Label46.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label46.Location = New System.Drawing.Point(162, 0)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(153, 140)
+        Me.Label46.TabIndex = 1
+        Me.Label46.Text = resources.GetString("Label46.Text")
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.BackColor = System.Drawing.Color.Yellow
+        Me.Label47.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label47.Location = New System.Drawing.Point(3, 140)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(153, 140)
+        Me.Label47.TabIndex = 2
+        Me.Label47.Text = "SÜRGŐS-NEM FONTOS" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "megszakítások," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "apróságok," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ad hoc megbeszélések," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "váratlan " &
+    "események," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "másoknak fontos feladatok," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "bizonyos telefonok"
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.BackColor = System.Drawing.Color.Salmon
+        Me.Label48.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label48.Location = New System.Drawing.Point(162, 140)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(153, 140)
+        Me.Label48.TabIndex = 3
+        Me.Label48.Text = "NEM SÜRGŐS-NEM FONTOS" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "rutin tevékenység" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "szöszmötölés" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "kellemes tevékenység" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "p" &
+    "ótcselekvés" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "puszta időtöltés" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "másoknak fontos telefon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "utazás, várakozás"
+        '
+        'TableLayoutPanel18
+        '
+        Me.TableLayoutPanel18.ColumnCount = 1
+        Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel18.Controls.Add(Me.Label49, 0, 0)
+        Me.TableLayoutPanel18.Controls.Add(Me.TableLayoutPanel19, 0, 1)
+        Me.TableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel18.Location = New System.Drawing.Point(3, 289)
+        Me.TableLayoutPanel18.Name = "TableLayoutPanel18"
+        Me.TableLayoutPanel18.RowCount = 3
+        Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel18.Size = New System.Drawing.Size(318, 82)
+        Me.TableLayoutPanel18.TabIndex = 1
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label49.Location = New System.Drawing.Point(3, 3)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(312, 13)
+        Me.Label49.TabIndex = 0
+        Me.Label49.Text = "Optimálishoz közeli eloszlás:"
+        '
+        'TableLayoutPanel19
+        '
+        Me.TableLayoutPanel19.ColumnCount = 4
+        Me.TableLayoutPanel19.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.2653!))
+        Me.TableLayoutPanel19.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.2449!))
+        Me.TableLayoutPanel19.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.2449!))
+        Me.TableLayoutPanel19.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.2449!))
+        Me.TableLayoutPanel19.Controls.Add(Me.Label50, 0, 0)
+        Me.TableLayoutPanel19.Controls.Add(Me.Label51, 1, 0)
+        Me.TableLayoutPanel19.Controls.Add(Me.Label52, 2, 0)
+        Me.TableLayoutPanel19.Controls.Add(Me.Label53, 3, 0)
+        Me.TableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel19.Location = New System.Drawing.Point(3, 19)
+        Me.TableLayoutPanel19.Name = "TableLayoutPanel19"
+        Me.TableLayoutPanel19.RowCount = 1
+        Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel19.Size = New System.Drawing.Size(312, 18)
+        Me.TableLayoutPanel19.TabIndex = 1
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.BackColor = System.Drawing.Color.LightGreen
+        Me.Label50.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label50.Location = New System.Drawing.Point(3, 0)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(191, 18)
+        Me.Label50.TabIndex = 0
+        Me.Label50.Text = "62%"
+        Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Label51.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label51.Location = New System.Drawing.Point(200, 0)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(32, 18)
+        Me.Label51.TabIndex = 1
+        Me.Label51.Text = "12%"
+        Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.BackColor = System.Drawing.Color.Yellow
+        Me.Label52.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label52.Location = New System.Drawing.Point(238, 0)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(32, 18)
+        Me.Label52.TabIndex = 2
+        Me.Label52.Text = "12%"
+        Me.Label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.BackColor = System.Drawing.Color.Salmon
+        Me.Label53.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label53.Location = New System.Drawing.Point(276, 0)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(33, 18)
+        Me.Label53.TabIndex = 3
+        Me.Label53.Text = "12%"
+        Me.Label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'IGMPane
         '
@@ -1507,6 +1701,14 @@ Partial Class IGMPane
         Me.TableLayoutPanel12.PerformLayout()
         Me.TableLayoutPanel15.ResumeLayout(False)
         Me.TableLayoutPanel15.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TableLayoutPanel16.ResumeLayout(False)
+        Me.TableLayoutPanel17.ResumeLayout(False)
+        Me.TableLayoutPanel17.PerformLayout()
+        Me.TableLayoutPanel18.ResumeLayout(False)
+        Me.TableLayoutPanel18.PerformLayout()
+        Me.TableLayoutPanel19.ResumeLayout(False)
+        Me.TableLayoutPanel19.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1638,4 +1840,17 @@ Partial Class IGMPane
     Friend WithEvents Label43 As Windows.Forms.Label
     Friend WithEvents Label44 As Windows.Forms.Label
     Friend WithEvents Label32 As Windows.Forms.Label
+    Friend WithEvents TableLayoutPanel16 As Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel17 As Windows.Forms.TableLayoutPanel
+    Friend WithEvents Label45 As Windows.Forms.Label
+    Friend WithEvents Label46 As Windows.Forms.Label
+    Friend WithEvents Label47 As Windows.Forms.Label
+    Friend WithEvents Label48 As Windows.Forms.Label
+    Friend WithEvents TableLayoutPanel18 As Windows.Forms.TableLayoutPanel
+    Friend WithEvents Label49 As Windows.Forms.Label
+    Friend WithEvents TableLayoutPanel19 As Windows.Forms.TableLayoutPanel
+    Friend WithEvents Label50 As Windows.Forms.Label
+    Friend WithEvents Label51 As Windows.Forms.Label
+    Friend WithEvents Label52 As Windows.Forms.Label
+    Friend WithEvents Label53 As Windows.Forms.Label
 End Class
