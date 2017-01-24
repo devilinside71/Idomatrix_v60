@@ -30,8 +30,9 @@
     <DefineConstants>VSTO40</DefineConstants>
     <StartupObject>
     </StartupObject>
+    <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>L:\LOGISZT\1_Szemelyes_mappak\Tamas_Laszlo\Idomatrixok\IGM_v60_Dell\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
     <ApplicationVersion>1.0.0.0</ApplicationVersion>
@@ -39,7 +40,6 @@
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>days</UpdateIntervalUnits>
-    <IsWebBootstrapper>False</IsWebBootstrapper>
     <ProductName>Idomatrix_v60</ProductName>
     <PublisherName />
     <SupportUrl />
@@ -285,6 +285,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Idomatrix_Delete_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Matrixv_Full02.html" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
