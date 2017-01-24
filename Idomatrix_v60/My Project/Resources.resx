@@ -915,28 +915,38 @@ S&lt;/strong&gt;&lt;/td&gt;
 &lt;td class="ossz01"&gt;NEM SÜRGŐS - FONTOS&lt;/td&gt;
 &lt;td class="ossz02"&gt;[SUMNSF1]&lt;/td&gt;
 &lt;td class="ossz03"&gt;[SUMNSF2]&lt;/td&gt;
+&lt;td class="ossz03"&gt;[SUMNSF3]&lt;/td&gt;
+&lt;td class="ossz03"&gt;[SUMNSF4]&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr &gt;
 &lt;td class="ossz04"&gt;SÜRGŐS - FONTOS&lt;/td&gt;
 &lt;td class="ossz05"&gt;[SUMSF1]&lt;/td&gt;
 &lt;td class="ossz06"&gt;[SUMSF2]&lt;/td&gt;
+&lt;td class="ossz06"&gt;[SUMSF3]&lt;/td&gt;
+&lt;td class="ossz06"&gt;[SUMSF4]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr &gt;
 &lt;td class="auto-style3"&gt;SÜRGŐS - NEM FONTOS&lt;/td&gt;
 &lt;td class="m12"&gt;[SUMSNF1]&lt;/td&gt;
 &lt;td class="m13"&gt;[SUMSNF2]&lt;/td&gt;
+&lt;td class="m13"&gt;[SUMSNF3]&lt;/td&gt;
+&lt;td class="m13"&gt;[SUMSNF4]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr &gt;
 &lt;td class="auto-style5" &gt;NEM SÜRGŐS - NEM FONTOS&lt;/td&gt;
 &lt;td class="auto-style4"&gt;[SUMNSNF1]&lt;/td&gt;
 &lt;td class="m14" &gt;[SUMNSNF2]&lt;/td&gt;
+&lt;td class="m14" &gt;[SUMNSNF3]&lt;/td&gt;
+&lt;td class="m14" &gt;[SUMNSNF4]&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td class="auto-style8"&gt;ÖSSZ&lt;/td&gt;
 &lt;td class="auto-style7"&gt;[SUM1]&lt;/td&gt;
 &lt;td class="auto-style6"&gt;[SUM2]&lt;/td&gt;
+&lt;td class="auto-style6"&gt;[SUM3]&lt;/td&gt;
+&lt;td class="auto-style6"&gt;[SUM4]&lt;/td&gt;
 &lt;/tr&gt;
 
 

@@ -397,20 +397,19 @@ Namespace My.Resources
         '''&lt;td class=&quot;ossz01&quot;&gt;NEM SÜRGŐS - FONTOS&lt;/td&gt;
         '''&lt;td class=&quot;ossz02&quot;&gt;[SUMNSF1]&lt;/td&gt;
         '''&lt;td class=&quot;ossz03&quot;&gt;[SUMNSF2]&lt;/td&gt;
+        '''&lt;td class=&quot;ossz03&quot;&gt;[SUMNSF3]&lt;/td&gt;
+        '''&lt;td class=&quot;ossz03&quot;&gt;[SUMNSF4]&lt;/td&gt;
         '''&lt;/tr&gt;
         '''
         '''&lt;tr &gt;
         '''&lt;td class=&quot;ossz04&quot;&gt;SÜRGŐS - FONTOS&lt;/td&gt;
         '''&lt;td class=&quot;ossz05&quot;&gt;[SUMSF1]&lt;/td&gt;
         '''&lt;td class=&quot;ossz06&quot;&gt;[SUMSF2]&lt;/td&gt;
+        '''&lt;td class=&quot;ossz06&quot;&gt;[SUMSF3]&lt;/td&gt;
+        '''&lt;td class=&quot;ossz06&quot;&gt;[SUMSF4]&lt;/td&gt;
         '''&lt;/tr&gt;
         '''&lt;tr &gt;
-        '''&lt;td class=&quot;auto-style3&quot;&gt;SÜRGŐS - NEM FONTOS&lt;/td&gt;
-        '''&lt;td class=&quot;m12&quot;&gt;[SUMSNF1]&lt;/td&gt;
-        '''&lt;td class=&quot;m13&quot;&gt;[SUMSNF2]&lt;/td&gt;
-        '''&lt;/tr&gt;
-        '''&lt;tr &gt;
-        '''&lt;td class=&quot;auto-style5&quot; &gt;NEM SÜRGŐS -  [rest of string was truncated]&quot;;.
+        '''&lt;td class=&quot;auto-style3&quot;&gt;SÜRG [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property ReportSumTable() As String
             Get

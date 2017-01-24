@@ -551,7 +551,7 @@ Me.TableLayoutPanel14.ColumnStyles
     End Function
     Private Sub SetEmailTasksInRange()
         Dim resultMin As String
-        Dim resultMin2 As String
+        Dim resultMin2 As String = vbNullString
         Dim calFolder As Outlook.Folder = TryCast(Globals.ThisAddIn.Application.Session.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox), Outlook.Folder)
         Dim startTime As DateTime = DateTimePicker1.Value.Date
         'A nullaóra miatt 1 nap eltérés kell
