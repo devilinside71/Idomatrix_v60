@@ -201,20 +201,20 @@ Namespace My.Resources
         '''  Looks up a localized string similar to &lt;!-- start ReportMainTableFStart --&gt;
         '''&lt;table  cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;80%&quot;&gt;
         '''&lt;tr&gt;
-        '''&lt;td class=&quot;m01&quot; rowspan=&quot;11&quot;&gt;&lt;strong&gt;F&lt;br /&gt;
+        '''&lt;td class=&quot;m01&quot; rowspan=&quot;[ROWSPAN]&quot;&gt;&lt;strong&gt;F&lt;br /&gt;
         '''&lt;/strong&gt;O&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;N&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;T&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;O&lt;strong&gt;&lt;br /&gt;
         '''S&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;m02&quot; colspan=&quot;6&quot;&gt;SÜRGŐS&lt;/td&gt;
-        '''&lt;td class=&quot;m03&quot; rowspan=&quot;11&quot;&gt;F&lt;strong&gt;&lt;br /&gt;
+        '''&lt;td class=&quot;m03&quot; rowspan=&quot;[ROWSPAN]&quot;&gt;F&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;O&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;N&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;T&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;O&lt;strong&gt;&lt;br /&gt;
         '''S&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;m03&quot; colspan=&quot;6&quot;&gt;NEM SÜRGŐS&lt; [rest of string was truncated]&quot;;.
+        '''&lt;td class=&quot;m03&quot; colspan=&quot; [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property ReportMainTableFStart() As String
             Get
@@ -269,7 +269,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized string similar to &lt;!-- start ReportMainTableNFStart --&gt;
         '''&lt;tr&gt;
-        '''&lt;td class=&quot;m09&quot; rowspan=&quot;11&quot;&gt;&lt;strong&gt;N&lt;br /&gt;
+        '''&lt;td class=&quot;m09&quot; rowspan=&quot;[ROWSPAN]&quot;&gt;&lt;strong&gt;N&lt;br /&gt;
         '''&lt;/strong&gt;E&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;M&lt;strong&gt;&lt;br /&gt;
         '''&lt;br /&gt;
@@ -280,13 +280,13 @@ Namespace My.Resources
         '''&lt;/strong&gt;O&lt;strong&gt;&lt;br /&gt;
         '''S&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;m10&quot; colspan=&quot;6&quot;&gt;SÜRGŐS&lt;/td&gt;
-        '''&lt;td class=&quot;m11&quot; rowspan=&quot;11&quot;&gt;N&lt;strong&gt;&lt;br /&gt;
+        '''&lt;td class=&quot;m11&quot; rowspan=&quot;[ROWSPAN]&quot;&gt;N&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;E&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;M&lt;strong&gt;&lt;br /&gt;
         '''&lt;br /&gt;
         '''&lt;/strong&gt;F&lt;strong&gt;&lt;br /&gt;
         '''&lt;/strong&gt;O&lt;strong&gt;&lt;br /&gt;
-        '''&lt;/strong&gt;N&lt;stro [rest of string was truncated]&quot;;.
+        '''&lt; [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property ReportMainTableNFStart() As String
             Get

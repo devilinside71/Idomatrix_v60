@@ -987,6 +987,377 @@ Me.TableLayoutPanel14.ColumnStyles
     End Sub
 
     Private Sub SendReport(Optional Test As Boolean = False)
+        Dim item As Outlook.MailItem
+        Dim bodyStr As String
+        Dim dateStr As String = vbNullString
+        Dim lineStr As String
+        Dim mainFLineCount As Integer
+        Dim monthlyWidth As String = "80"
+        Dim mainWidth As String = "80"
+        Dim leftSum1 As Double = 0
+        Dim leftSum2 As Double = 0
+        Dim rightSum1 As Double = 0
+        Dim rightSum2 As Double = 0
+        Dim sumWidth As String = "25"
+        Dim sumNSF1 As Double = 0
+        Dim sumNSF2 As Double = 0
+        Dim sumSF1 As Double = 0
+        Dim sumSF2 As Double = 0
+        Dim sumSNF1 As Double = 0
+        Dim sumSNF2 As Double = 0
+        Dim sumNSNF1 As Double = 0
+        Dim sumNSNF2 As Double = 0
+        Dim sum1 As Double = 0
+        Dim sum2 As Double = 0
+        Dim evalWidth As String = "30"
+        Dim evalNSF As Double = 0
+        Dim evalSF As Double = 0
+        Dim evalSNF As Double = 0
+        Dim evalNSNF As Double = 0
 
+        bodyStr = My.Resources.ReportStart + vbCrLf
+
+        If Me.DateTimePicker1.Value = Me.DateTimePicker2.Value Then
+            dateStr = Format(DateTimePicker1.Value, "yyyy/MM/dd")
+        Else
+            dateStr = Format(DateTimePicker1.Value, "yyyy/MM/dd") + " - " + Format(DateTimePicker2.Value, "yyyy/MM/dd")
+        End If
+        lineStr = My.Resources.ReportIntro
+        lineStr = lineStr.Replace("[INTERVAL]", dateStr)
+        bodyStr = bodyStr + lineStr + vbCrLf
+
+
+#Region "Monthly Table"
+        bodyStr = bodyStr + My.Resources.ReportMonthlyTableStart + vbCrLf
+
+        For i As Integer = 0 To GetMaxLinesMonthly()
+            lineStr = My.Resources.ReportMonthlyTableRow
+            Try
+                lineStr = lineStr.Replace("[LEFT1]", Me.ListView5.Items(i).SubItems.Item(0).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT1]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT2]", Me.ListView5.Items(i).SubItems.Item(1).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT2]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT3]", Me.ListView5.Items(i).SubItems.Item(2).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT3]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT4]", Me.ListView5.Items(i).SubItems.Item(4).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT4]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT5]", Me.ListView5.Items(i).SubItems.Item(5).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT5]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT6]", Me.ListView5.Items(i).SubItems.Item(6).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT6]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT1]", Me.ListView6.Items(i).SubItems.Item(0).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT1]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT2]", Me.ListView6.Items(i).SubItems.Item(1).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT2]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT3]", Me.ListView6.Items(i).SubItems.Item(2).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT3]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT4]", Me.ListView6.Items(i).SubItems.Item(4).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT4]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT5]", Me.ListView6.Items(i).SubItems.Item(5).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT5]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT6]", Me.ListView6.Items(i).SubItems.Item(6).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT6]", "&nbsp;")
+            End Try
+            bodyStr = bodyStr + lineStr + vbCrLf
+        Next
+#End Region
+
+
+#Region "Main table"
+        lineStr = My.Resources.ReportMainTableFStart
+
+        mainFLineCount = GetMaxLinesSF_NSF()
+        If mainFLineCount < 9 Then
+            mainFLineCount = 9
+        End If
+        lineStr = lineStr.Replace("[ROWSPAN]", Trim(CStr(mainFLineCount + 3)))
+        bodyStr = bodyStr + lineStr + vbCrLf
+
+        For i As Integer = 0 To mainFLineCount - 1
+            lineStr = My.Resources.ReportMainTableFRow
+            Try
+                lineStr = lineStr.Replace("[LEFT1]", Me.ListView1.Items(i).SubItems.Item(0).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT1]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT2]", Me.ListView1.Items(i).SubItems.Item(1).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT2]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT3]", Me.ListView1.Items(i).SubItems.Item(2).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT3]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT4]", Me.ListView1.Items(i).SubItems.Item(4).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT4]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT5]", Me.ListView1.Items(i).SubItems.Item(5).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT5]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT6]", Me.ListView1.Items(i).SubItems.Item(6).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT6]", "&nbsp;")
+            End Try
+
+            Try
+                lineStr = lineStr.Replace("[RIGHT1]", Me.ListView2.Items(i).SubItems.Item(0).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT1]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT2]", Me.ListView2.Items(i).SubItems.Item(1).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT2]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT3]", Me.ListView2.Items(i).SubItems.Item(2).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT3]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT4]", Me.ListView2.Items(i).SubItems.Item(4).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT4]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT5]", Me.ListView2.Items(i).SubItems.Item(5).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT5]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT6]", Me.ListView2.Items(i).SubItems.Item(6).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT6]", "&nbsp;")
+            End Try
+            bodyStr = bodyStr + lineStr + vbCrLf
+        Next
+
+
+        lineStr = My.Resources.ReportMainTableFEnd
+        leftSum1 = resultSF
+        leftSum2 = Math.Round(resultSF / 60, 2)
+        rightSum1 = resultNSF
+        rightSum2 = Math.Round(resultNSF / 60, 2)
+        lineStr = lineStr.Replace("[LEFT1]", Trim(CStr(leftSum1)))
+        lineStr = lineStr.Replace("[LEFT2]", Trim(CStr(leftSum2)))
+        lineStr = lineStr.Replace("[RIGHT1]", Trim(CStr(rightSum1)))
+        lineStr = lineStr.Replace("[RIGHT2]", Trim(CStr(rightSum2)))
+        bodyStr = bodyStr + lineStr + vbCrLf
+#End Region
+
+#Region "Main Table NF"
+        lineStr = My.Resources.ReportMainTableNFStart
+
+        mainFLineCount = GetMaxLinesSNF_NSNF()
+        If mainFLineCount < 9 Then
+            mainFLineCount = 9
+        End If
+        lineStr = lineStr.Replace("[ROWSPAN]", Trim(CStr(mainFLineCount + 3)))
+        bodyStr = bodyStr + lineStr + vbCrLf
+
+        For i As Integer = 0 To mainFLineCount - 1
+            lineStr = My.Resources.ReportMainTableNFRow
+            Try
+                lineStr = lineStr.Replace("[LEFT1]", Me.ListView3.Items(i).SubItems.Item(0).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT1]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT2]", Me.ListView3.Items(i).SubItems.Item(1).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT2]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT3]", Me.ListView3.Items(i).SubItems.Item(2).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT3]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT4]", Me.ListView3.Items(i).SubItems.Item(4).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT4]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT5]", Me.ListView3.Items(i).SubItems.Item(5).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT5]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[LEFT6]", Me.ListView3.Items(i).SubItems.Item(6).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[LEFT6]", "&nbsp;")
+            End Try
+
+            Try
+                lineStr = lineStr.Replace("[RIGHT1]", Me.ListView4.Items(i).SubItems.Item(0).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT1]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT2]", Me.ListView4.Items(i).SubItems.Item(1).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT2]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT3]", Me.ListView4.Items(i).SubItems.Item(2).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT3]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT4]", Me.ListView4.Items(i).SubItems.Item(4).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT4]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT5]", Me.ListView4.Items(i).SubItems.Item(5).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT5]", "&nbsp;")
+            End Try
+            Try
+                lineStr = lineStr.Replace("[RIGHT6]", Me.ListView4.Items(i).SubItems.Item(6).Text)
+            Catch ex As Exception
+                lineStr = lineStr.Replace("[RIGHT6]", "&nbsp;")
+            End Try
+
+            bodyStr = bodyStr + lineStr + vbCrLf
+
+        Next
+        lineStr = My.Resources.ReportMainTableNFEnd
+        leftSum1 = resultSNF
+        leftSum2 = Math.Round(resultSNF / 60, 2)
+        rightSum1 = resultNSNF
+        rightSum2 = Math.Round(resultNSNF / 60, 2)
+        lineStr = lineStr.Replace("[LEFT1]", Trim(CStr(leftSum1)))
+        lineStr = lineStr.Replace("[LEFT2]", Trim(CStr(leftSum2)))
+        lineStr = lineStr.Replace("[RIGHT1]", Trim(CStr(rightSum1)))
+        lineStr = lineStr.Replace("[RIGHT2]", Trim(CStr(rightSum2)))
+        bodyStr = bodyStr + lineStr + vbCrLf
+#End Region
+
+        bodyStr = bodyStr + My.Resources.ReportMainTableEnd + vbCrLf
+
+#Region "Sum table"
+        lineStr = My.Resources.ReportSumTable
+
+        sumNSF1 = resultNSF
+        sumNSF2 = Math.Round(resultNSF / 60, 2)
+        sumSF1 = resultSF
+        sumSF2 = Math.Round(resultSF / 60, 2)
+        sumSNF1 = resultSNF
+        sumSNF2 = Math.Round(resultSNF / 60, 2)
+        sumNSNF1 = resultNSNF
+        sumNSNF2 = Math.Round(resultNSNF / 60, 2)
+        sum1 = sumNSF1 + sumSF1 + sumSNF1 + sumNSNF1
+        sum2 = sumNSF2 + sumSF2 + sumSNF2 + sumNSNF2
+
+        lineStr = lineStr.Replace("[SUMNSF1]", Trim(CStr(sumNSF1)))
+        lineStr = lineStr.Replace("[SUMNSF2]", Trim(CStr(sumNSF2)))
+        lineStr = lineStr.Replace("[SUMSF1]", Trim(CStr(sumSF1)))
+        lineStr = lineStr.Replace("[SUMSF2]", Trim(CStr(sumSF2)))
+        lineStr = lineStr.Replace("[SUMSNF1]", Trim(CStr(sumSNF1)))
+        lineStr = lineStr.Replace("[SUMSNF2]", Trim(CStr(sumSNF2)))
+        lineStr = lineStr.Replace("[SUMNSNF1]", Trim(CStr(sumNSNF1)))
+        lineStr = lineStr.Replace("[SUMNSNF2]", Trim(CStr(sumNSNF2)))
+        lineStr = lineStr.Replace("[SUM1]", Trim(CStr(sum1)))
+        lineStr = lineStr.Replace("[SUM2]", Trim(CStr(sum2)))
+        bodyStr = bodyStr + lineStr + vbCrLf
+#End Region
+
+#Region "Eval table"
+        'Értékelés
+        lineStr = My.Resources.ReportEvalTable
+        evalSF = resultEvalSF
+        evalSNF = resultEvalSNF
+        evalNSF = resultEvalNSF
+        evalNSNF = resultEvalNSNF
+        lineStr = lineStr.Replace("[EVAL1]", Trim(CStr(evalNSF)))
+        lineStr = lineStr.Replace("[EVAL2]", Trim(CStr(evalSF)))
+        lineStr = lineStr.Replace("[EVAL3]", Trim(CStr(evalSNF)))
+        lineStr = lineStr.Replace("[EVAL4]", Trim(CStr(evalNSNF)))
+
+
+
+
+
+        bodyStr = bodyStr + lineStr + vbCrLf
+
+
+#End Region
+
+        lineStr = My.Resources.ReportBodyEnd
+        bodyStr = bodyStr + lineStr + vbCrLf
+
+
+        item = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olMailItem)
+        item.Subject = "Időmátrix " + dateStr
+
+
+        item.HTMLBody = bodyStr
+        item.Display(True)
     End Sub
+    Private Function GetMaxLinesSF_NSF()
+        Dim line1, line2 As Integer
+
+        line1 = Me.ListView1.Items.Count
+        line2 = Me.ListView2.Items.Count
+
+        Return Math.Max(line1, line2)
+    End Function
+    Private Function GetMaxLinesSNF_NSNF()
+        Dim line1, line2 As Integer
+
+        line1 = Me.ListView3.Items.Count
+        line2 = Me.ListView4.Items.Count
+
+        Return Math.Max(line1, line2)
+    End Function
+    Private Function GetMaxLinesMonthly()
+        Dim line1, line2 As Integer
+
+        line1 = Me.ListView5.Items.Count
+        line2 = Me.ListView6.Items.Count
+
+        Return Math.Max(line1, line2)
+    End Function
 End Class
