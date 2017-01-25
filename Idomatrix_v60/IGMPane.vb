@@ -1099,6 +1099,8 @@ Me.TableLayoutPanel14.ColumnStyles
             End Try
             bodyStr = bodyStr + lineStr + vbCrLf
         Next
+
+        bodyStr = bodyStr + My.Resources.ReportMonthlyTableEnd
 #End Region
 
 
@@ -1339,6 +1341,7 @@ Me.TableLayoutPanel14.ColumnStyles
 
 
         item.HTMLBody = bodyStr
+        'Debug.WriteLine(bodyStr)
         item.Display(True)
     End Sub
     Private Function GetMaxLinesSF_NSF()
