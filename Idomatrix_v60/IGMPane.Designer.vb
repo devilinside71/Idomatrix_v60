@@ -1482,7 +1482,7 @@ Partial Class IGMPane
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(324, 374)
         Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Súgó"
+        Me.TabPage4.Text = "Mit hova"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel16

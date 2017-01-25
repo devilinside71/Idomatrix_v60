@@ -3,7 +3,10 @@ Imports System.Runtime.InteropServices
 Imports System.Windows.Forms
 
 Public Class IGMPane
+
     Private Suspended As Boolean
+
+    'Terv perc
     Private resultSF As Double = 0
     Private resultSNF As Double = 0
     Private resultNSF As Double = 0
@@ -14,6 +17,7 @@ Public Class IGMPane
     Private resultEvalNSF As Integer = 0
     Private resultEvalNSNF As Integer = 0
 
+    'Terv óra
     Private resultT_SF As Double = 0
     Private resultT_SNF As Double = 0
     Private resultT_NSF As Double = 0
@@ -23,6 +27,30 @@ Public Class IGMPane
     Private resultT_EvalNSF As Double = 0
     Private resultT_EvalSNF As Double = 0
     Private resultT_EvalNSNF As Double = 0
+
+    'Tény perc
+    Private resultN_SF As Double = 0
+    Private resultN_SNF As Double = 0
+    Private resultN_NSF As Double = 0
+    Private resultN_NSNF As Double = 0
+    Private resultN_sum As Double = 0
+    Private resultN_EvalSF As Double = 0
+    Private resultN_EvalNSF As Double = 0
+    Private resultN_EvalSNF As Double = 0
+    Private resultN_EvalNSNF As Double = 0
+
+
+    Private resultNT_SF As Double = 0
+    Private resultNT_SNF As Double = 0
+    Private resultNT_NSF As Double = 0
+    Private resultNT_NSNF As Double = 0
+    Private resultNT_sum As Double = 0
+    Private resultNT_EvalSF As Double = 0
+    Private resultNT_EvalNSF As Double = 0
+    Private resultNT_EvalSNF As Double = 0
+    Private resultNT_EvalNSNF As Double = 0
+
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Suspended = True
         DateTimePicker1.Value = DateTime.Today.Date
@@ -1289,25 +1317,55 @@ Me.TableLayoutPanel14.ColumnStyles
 
         sumNSF1 = resultNSF
         sumNSF2 = Math.Round(resultNSF / 60, 2)
+        Dim sumNSF3 As Double
+        sumNSF3 = resultT_NSF
+        Dim sumNSF4 As Double
+        sumNSF4 = Math.Round(resultT_NSF / 60, 2)
         sumSF1 = resultSF
-        sumSF2 = Math.Round(resultSF / 60, 2)
+        sumSF2 = Math.Round(resultT_SF / 60, 2)
+        Dim sumSF3 As Double
+        sumSF3 = resultSF
+        Dim sumSF4 As Double
+        sumSF4 = Math.Round(resultT_SF / 60, 2)
         sumSNF1 = resultSNF
         sumSNF2 = Math.Round(resultSNF / 60, 2)
+        Dim sumSNF3 As Double
+        sumSNF3 = resultT_SNF
+        Dim sumSNF4 As Double
+        sumSNF4 = Math.Round(resultT_SNF / 60, 2)
         sumNSNF1 = resultNSNF
         sumNSNF2 = Math.Round(resultNSNF / 60, 2)
+        Dim sumNSNF3 As Double
+        sumNSNF3 = resultT_NSNF
+        Dim sumNSNF4 As Double
+        sumNSNF4 = Math.Round(resultT_NSNF / 60, 2)
         sum1 = sumNSF1 + sumSF1 + sumSNF1 + sumNSNF1
         sum2 = sumNSF2 + sumSF2 + sumSNF2 + sumNSNF2
+        Dim sum3 As Double
+        sum3 = sumNSF3 + sumSF3 + sumSNF3 + sumNSNF3
+        Dim sum4 As Double
+        sum4 = sumNSF4 + sumSF4 + sumSNF4 + sumNSNF4
 
         lineStr = lineStr.Replace("[SUMNSF1]", Trim(CStr(sumNSF1)))
         lineStr = lineStr.Replace("[SUMNSF2]", Trim(CStr(sumNSF2)))
+        lineStr = lineStr.Replace("[SUMNSF3]", Trim(CStr(sumNSF3)))
+        lineStr = lineStr.Replace("[SUMNSF4]", Trim(CStr(sumNSF4)))
         lineStr = lineStr.Replace("[SUMSF1]", Trim(CStr(sumSF1)))
         lineStr = lineStr.Replace("[SUMSF2]", Trim(CStr(sumSF2)))
+        lineStr = lineStr.Replace("[SUMSF3]", Trim(CStr(sumSF3)))
+        lineStr = lineStr.Replace("[SUMSF4]", Trim(CStr(sumSF4)))
         lineStr = lineStr.Replace("[SUMSNF1]", Trim(CStr(sumSNF1)))
         lineStr = lineStr.Replace("[SUMSNF2]", Trim(CStr(sumSNF2)))
+        lineStr = lineStr.Replace("[SUMSNF3]", Trim(CStr(sumSNF3)))
+        lineStr = lineStr.Replace("[SUMSNF4]", Trim(CStr(sumSNF4)))
         lineStr = lineStr.Replace("[SUMNSNF1]", Trim(CStr(sumNSNF1)))
         lineStr = lineStr.Replace("[SUMNSNF2]", Trim(CStr(sumNSNF2)))
+        lineStr = lineStr.Replace("[SUMNSNF3]", Trim(CStr(sumNSNF3)))
+        lineStr = lineStr.Replace("[SUMNSNF4]", Trim(CStr(sumNSNF4)))
         lineStr = lineStr.Replace("[SUM1]", Trim(CStr(sum1)))
         lineStr = lineStr.Replace("[SUM2]", Trim(CStr(sum2)))
+        lineStr = lineStr.Replace("[SUM3]", Trim(CStr(sum3)))
+        lineStr = lineStr.Replace("[SUM4]", Trim(CStr(sum4)))
         bodyStr = bodyStr + lineStr + vbCrLf
 #End Region
 
@@ -1322,7 +1380,10 @@ Me.TableLayoutPanel14.ColumnStyles
         lineStr = lineStr.Replace("[EVAL2]", Trim(CStr(evalSF)))
         lineStr = lineStr.Replace("[EVAL3]", Trim(CStr(evalSNF)))
         lineStr = lineStr.Replace("[EVAL4]", Trim(CStr(evalNSNF)))
-
+        lineStr = lineStr.Replace("[EVAL5]", Trim(CStr(resultT_NSF)))
+        lineStr = lineStr.Replace("[EVAL6]", Trim(CStr(resultT_SF)))
+        lineStr = lineStr.Replace("[EVAL7]", Trim(CStr(resultT_SNF)))
+        lineStr = lineStr.Replace("[EVAL8]", Trim(CStr(resultT_NSNF)))
 
 
 
