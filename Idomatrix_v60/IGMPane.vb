@@ -1402,6 +1402,7 @@ Me.TableLayoutPanel14.ColumnStyles
 
 
         item.HTMLBody = bodyStr
+
         'Debug.WriteLine(bodyStr)
         item.Display(True)
     End Sub
