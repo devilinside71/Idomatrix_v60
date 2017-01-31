@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms
+﻿Imports System.Diagnostics
+Imports System.Windows.Forms
 
 Public Class FormRegion1
 
@@ -32,7 +33,7 @@ Public Class FormRegion1
             Me.Button6.Visible = False
             Me.Button7.Visible = False
         End If
-        'Setup Terv-Tény
+#Region "Setup Terv-Tény"
         If (TypeOf Me.OutlookItem Is Outlook.MailItem) Then
             Try
                 Dim tervTeny As String() = Split(Me.OutlookItem.Companies, "@")
@@ -65,6 +66,7 @@ Public Class FormRegion1
             End Try
             Me.NumericUpDown1.Enabled = False
         ElseIf (TypeOf Me.OutlookItem Is Outlook.MeetingItem) Then
+            Debug.Print("MEETING")
             Try
                 Dim tervTeny As String() = Split(Me.OutlookItem.Companies, "@")
                 'Debug.Print(Me.OutlookItem.Companies)
@@ -83,6 +85,7 @@ Public Class FormRegion1
             End Try
             Me.NumericUpDown1.Enabled = False
         ElseIf (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
+
             Try
                 If Me.OutlookItem.ActualWork = 0 Then
                     Me.OutlookItem.ActualWork = 30
@@ -99,6 +102,8 @@ Public Class FormRegion1
             'ElseIf (TypeOf Me.OutlookItem Is Outlook.AppointmentItem) Or (TypeOf Me.OutlookItem Is Outlook.MeetingItem) Then
             Me.NumericUpDown1.Enabled = True
         End If
+
+#End Region
     End Sub
 
     'Occurs when the form region is closed.   
@@ -277,36 +282,27 @@ Public Class FormRegion1
     Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
         Try
             Me.OutlookItem.Companies = CStr(NumericUpDown1.Value) + "@" + CStr(NumericUpDown2.Value)
-
-
         Catch ex2 As Exception
         End Try
-
         If (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
             Try
                 Me.OutlookItem.ActualWork = Me.NumericUpDown1.Value
-
             Catch ex As Exception
             End Try
-
         End If
     End Sub
 
     Private Sub NumericUpDown2_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown2.ValueChanged
         Try
             Me.OutlookItem.Companies = CStr(NumericUpDown1.Value) + "@" + CStr(NumericUpDown2.Value)
-
-
         Catch ex2 As Exception
         End Try
 
         If (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
             Try
                 Me.OutlookItem.TotalWork = Me.NumericUpDown2.Value
-
             Catch ex As Exception
             End Try
-
         End If
     End Sub
 End Class
