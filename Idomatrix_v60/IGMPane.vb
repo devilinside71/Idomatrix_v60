@@ -1380,10 +1380,11 @@ Me.TableLayoutPanel14.ColumnStyles
         lineStr = lineStr.Replace("[EVAL2]", Trim(CStr(evalSF)))
         lineStr = lineStr.Replace("[EVAL3]", Trim(CStr(evalSNF)))
         lineStr = lineStr.Replace("[EVAL4]", Trim(CStr(evalNSNF)))
-        lineStr = lineStr.Replace("[EVAL5]", Trim(CStr(resultT_NSF)))
-        lineStr = lineStr.Replace("[EVAL6]", Trim(CStr(resultT_SF)))
-        lineStr = lineStr.Replace("[EVAL7]", Trim(CStr(resultT_SNF)))
-        lineStr = lineStr.Replace("[EVAL8]", Trim(CStr(resultT_NSNF)))
+
+        lineStr = lineStr.Replace("[EVAL5]", Trim(CStr(resultT_EvalNSF)))
+        lineStr = lineStr.Replace("[EVAL6]", Trim(CStr(resultT_EvalSF)))
+        lineStr = lineStr.Replace("[EVAL7]", Trim(CStr(resultT_EvalSNF)))
+        lineStr = lineStr.Replace("[EVAL8]", Trim(CStr(resultT_EvalNSNF)))
 
 
 
