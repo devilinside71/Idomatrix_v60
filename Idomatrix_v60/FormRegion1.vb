@@ -32,6 +32,73 @@ Public Class FormRegion1
             Me.Button6.Visible = False
             Me.Button7.Visible = False
         End If
+        'Setup Terv-Tény
+        If (TypeOf Me.OutlookItem Is Outlook.MailItem) Then
+            Try
+                Dim tervTeny As String() = Split(Me.OutlookItem.Companies, "@")
+                'Debug.Print(Me.OutlookItem.Companies)
+                'Debug.Print(tervTeny(0))
+                'Debug.Print(tervTeny(1))
+                Me.NumericUpDown1.Value = CInt(tervTeny(0))
+                Me.NumericUpDown2.Value = CInt(tervTeny(1))
+            Catch ex2 As Exception
+                'Me.NumericUpDown1.Value = 0
+
+            End Try
+            Me.NumericUpDown1.Enabled = True
+        ElseIf (TypeOf Me.OutlookItem Is Outlook.AppointmentItem) Then
+            Try
+                Dim tervTeny As String() = Split(Me.OutlookItem.Companies, "@")
+                'Debug.Print(Me.OutlookItem.Companies)
+                'Debug.Print(tervTeny(0))
+                'Debug.Print(tervTeny(1))
+                'Me.NumericUpDown1.Value = CInt(tervTeny(0))
+                Me.NumericUpDown2.Value = CInt(tervTeny(1))
+            Catch ex2 As Exception
+                'Me.NumericUpDown1.Value = 0
+
+            End Try
+            Try
+                Dim elapsedTime As TimeSpan = Me.OutlookItem.End.Subtract(Me.OutlookItem.Start)
+                Me.NumericUpDown1.Value = elapsedTime.TotalMinutes
+            Catch ex As Exception
+            End Try
+            Me.NumericUpDown1.Enabled = False
+        ElseIf (TypeOf Me.OutlookItem Is Outlook.MeetingItem) Then
+            Try
+                Dim tervTeny As String() = Split(Me.OutlookItem.Companies, "@")
+                'Debug.Print(Me.OutlookItem.Companies)
+                'Debug.Print(tervTeny(0))
+                'Debug.Print(tervTeny(1))
+                'Me.NumericUpDown1.Value = CInt(tervTeny(0))
+                Me.NumericUpDown2.Value = CInt(tervTeny(1))
+            Catch ex2 As Exception
+                'Me.NumericUpDown1.Value = 0
+
+            End Try
+            Try
+                Dim elapsedTime As TimeSpan = Me.OutlookItem.End.Subtract(Me.OutlookItem.Start)
+                Me.NumericUpDown1.Value = elapsedTime.TotalMinutes
+            Catch ex As Exception
+            End Try
+            Me.NumericUpDown1.Enabled = False
+        ElseIf (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
+            Try
+                If Me.OutlookItem.ActualWork = 0 Then
+                    Me.OutlookItem.ActualWork = 30
+                End If
+                Me.NumericUpDown1.Value = Me.OutlookItem.ActualWork
+                'Me.NumericUpDown2.Value = Me.OutlookItem.TotalWork
+            Catch ex As Exception
+
+            End Try
+            Try
+                Me.NumericUpDown2.Value = Me.OutlookItem.TotalWork
+            Catch ex As Exception
+            End Try
+            'ElseIf (TypeOf Me.OutlookItem Is Outlook.AppointmentItem) Or (TypeOf Me.OutlookItem Is Outlook.MeetingItem) Then
+            Me.NumericUpDown1.Enabled = True
+        End If
     End Sub
 
     'Occurs when the form region is closed.   
