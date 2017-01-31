@@ -1322,9 +1322,9 @@ Me.TableLayoutPanel14.ColumnStyles
         Dim sumNSF4 As Double
         sumNSF4 = Math.Round(resultT_NSF / 60, 2)
         sumSF1 = resultSF
-        sumSF2 = Math.Round(resultT_SF / 60, 2)
+        sumSF2 = Math.Round(resultSF / 60, 2)
         Dim sumSF3 As Double
-        sumSF3 = resultSF
+        sumSF3 = resultT_SF
         Dim sumSF4 As Double
         sumSF4 = Math.Round(resultT_SF / 60, 2)
         sumSNF1 = resultSNF
