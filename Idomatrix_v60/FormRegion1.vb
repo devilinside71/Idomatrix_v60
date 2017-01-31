@@ -275,10 +275,38 @@ Public Class FormRegion1
     End Sub
 
     Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
+        Try
+            Me.OutlookItem.Companies = CStr(NumericUpDown1.Value) + "@" + CStr(NumericUpDown2.Value)
 
+
+        Catch ex2 As Exception
+        End Try
+
+        If (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
+            Try
+                Me.OutlookItem.ActualWork = Me.NumericUpDown1.Value
+
+            Catch ex As Exception
+            End Try
+
+        End If
     End Sub
 
     Private Sub NumericUpDown2_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown2.ValueChanged
+        Try
+            Me.OutlookItem.Companies = CStr(NumericUpDown1.Value) + "@" + CStr(NumericUpDown2.Value)
 
+
+        Catch ex2 As Exception
+        End Try
+
+        If (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
+            Try
+                Me.OutlookItem.TotalWork = Me.NumericUpDown2.Value
+
+            Catch ex As Exception
+            End Try
+
+        End If
     End Sub
 End Class
