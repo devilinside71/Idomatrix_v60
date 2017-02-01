@@ -2,6 +2,7 @@
 Imports System.Windows.Forms
 
 Public Class FormRegion1
+    Private Suspended As Boolean
 
 #Region "Form Region Factory"
 
@@ -26,6 +27,7 @@ Public Class FormRegion1
     'Use Me.OutlookItem to get a reference to the current Outlook item.
     'Use Me.OutlookFormRegion to get a reference to the form region.
     Private Sub FormRegion1_FormRegionShowing(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.FormRegionShowing
+        Suspended = True
         If (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
             Me.Button6.Visible = True
             Me.Button7.Visible = True
@@ -104,7 +106,7 @@ Public Class FormRegion1
             'ElseIf (TypeOf Me.OutlookItem Is Outlook.AppointmentItem) Or (TypeOf Me.OutlookItem Is Outlook.MeetingItem) Then
             Me.NumericUpDown1.Enabled = True
         End If
-
+        Suspended = False
 #End Region
     End Sub
 
@@ -112,6 +114,23 @@ Public Class FormRegion1
     'Use Me.OutlookItem to get a reference to the current Outlook item.
     'Use Me.OutlookFormRegion to get a reference to the form region.
     Private Sub FormRegion1_FormRegionClosed(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.FormRegionClosed
+        'Try
+        '    Me.OutlookItem.Companies = CStr(NumericUpDown1.Value) + "@" + CStr(NumericUpDown2.Value)
+        'Catch ex2 As Exception
+        '    Debug.WriteLine("FR:Num1:Companies:" + Me.OutlookItem.subject)
+        'End Try
+        'If (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
+        '    Try
+        '        Me.OutlookItem.ActualWork = Me.NumericUpDown1.Value
+        '    Catch ex As Exception
+        '        Debug.WriteLine("FR:Num1:Actual:" + Me.OutlookItem.subject)
+        '    End Try
+        '    Try
+        '        Me.OutlookItem.TotalWork = Me.NumericUpDown2.Value
+        '    Catch ex As Exception
+        '        Debug.WriteLine("FR:Num1:Total:" + Me.OutlookItem.subject)
+        '    End Try
+        'End If
         Call Globals.ThisAddIn.RefreshTaskpane()
     End Sub
 
@@ -282,29 +301,47 @@ Public Class FormRegion1
     End Sub
 
     Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
-        Try
-            Me.OutlookItem.Companies = CStr(NumericUpDown1.Value) + "@" + CStr(NumericUpDown2.Value)
-        Catch ex2 As Exception
-        End Try
-        If (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
+        If Not Suspended Then
             Try
-                Me.OutlookItem.ActualWork = Me.NumericUpDown1.Value
-            Catch ex As Exception
+                Me.OutlookItem.Companies = CStr(NumericUpDown1.Value) + "@" + CStr(NumericUpDown2.Value)
+            Catch ex2 As Exception
+                Debug.WriteLine("FR:Num1:Companies:" + Me.OutlookItem.subject)
             End Try
+            If (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
+                Try
+                    Me.OutlookItem.ActualWork = Me.NumericUpDown1.Value
+                Catch ex As Exception
+                    Debug.WriteLine("FR:Num1:Actual:" + Me.OutlookItem.subject)
+                End Try
+                Try
+                    Me.OutlookItem.TotalWork = Me.NumericUpDown2.Value
+                Catch ex As Exception
+                    Debug.WriteLine("FR:Num1:Total:" + Me.OutlookItem.subject)
+                End Try
+            End If
         End If
     End Sub
 
     Private Sub NumericUpDown2_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown2.ValueChanged
-        Try
-            Me.OutlookItem.Companies = CStr(NumericUpDown1.Value) + "@" + CStr(NumericUpDown2.Value)
-        Catch ex2 As Exception
-        End Try
-
-        If (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
+        If Not Suspended Then
             Try
-                Me.OutlookItem.TotalWork = Me.NumericUpDown2.Value
-            Catch ex As Exception
+                Me.OutlookItem.Companies = CStr(NumericUpDown1.Value) + "@" + CStr(NumericUpDown2.Value)
+            Catch ex2 As Exception
+                Debug.WriteLine("Num2:Companies:" + Me.OutlookItem.subject)
             End Try
+
+            If (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
+                Try
+                    Me.OutlookItem.ActualWork = Me.NumericUpDown1.Value
+                Catch ex As Exception
+                    Debug.WriteLine("Num2:Actual:" + Me.OutlookItem.subject)
+                End Try
+                Try
+                    Me.OutlookItem.TotalWork = Me.NumericUpDown2.Value
+                Catch ex As Exception
+                    Debug.WriteLine("Num2:Total:" + Me.OutlookItem.subject)
+                End Try
+            End If
         End If
     End Sub
 End Class
