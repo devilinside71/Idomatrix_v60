@@ -37,51 +37,52 @@ Public Class FormRegion1
         If (TypeOf Me.OutlookItem Is Outlook.MailItem) Then
             Try
                 Dim tervTeny As String() = Split(Me.OutlookItem.Companies, "@")
-                'Debug.Print(Me.OutlookItem.Companies)
-                'Debug.Print(tervTeny(0))
-                'Debug.Print(tervTeny(1))
+                'Debug.WriteLine(Me.OutlookItem.Companies)
+                'Debug.WriteLine(tervTeny(0))
+                'Debug.WriteLine(tervTeny(1))
                 Me.NumericUpDown1.Value = CInt(tervTeny(0))
                 Me.NumericUpDown2.Value = CInt(tervTeny(1))
             Catch ex2 As Exception
                 'Me.NumericUpDown1.Value = 0
-
+                Debug.WriteLine("FR:Mail:NoCompanies:" + Me.OutlookItem.Subject)
             End Try
             Me.NumericUpDown1.Enabled = True
         ElseIf (TypeOf Me.OutlookItem Is Outlook.AppointmentItem) Then
             Try
                 Dim tervTeny As String() = Split(Me.OutlookItem.Companies, "@")
-                'Debug.Print(Me.OutlookItem.Companies)
-                'Debug.Print(tervTeny(0))
-                'Debug.Print(tervTeny(1))
+                'Debug.WriteLine(Me.OutlookItem.Companies)
+                'Debug.WriteLine(tervTeny(0))
+                'Debug.WriteLine(tervTeny(1))
                 'Me.NumericUpDown1.Value = CInt(tervTeny(0))
                 Me.NumericUpDown2.Value = CInt(tervTeny(1))
             Catch ex2 As Exception
-                'Me.NumericUpDown1.Value = 0
-
+                Debug.WriteLine("FR:Appt:NoCompanies:" + Me.OutlookItem.Subject)
+                Me.NumericUpDown2.Value = 0
             End Try
             Try
                 Dim elapsedTime As TimeSpan = Me.OutlookItem.End.Subtract(Me.OutlookItem.Start)
                 Me.NumericUpDown1.Value = elapsedTime.TotalMinutes
             Catch ex As Exception
+                Debug.WriteLine("FR:Mail:Subtract:" + Me.OutlookItem.Subject)
             End Try
             Me.NumericUpDown1.Enabled = False
         ElseIf (TypeOf Me.OutlookItem Is Outlook.MeetingItem) Then
-            Debug.Print("MEETING")
             Try
                 Dim tervTeny As String() = Split(Me.OutlookItem.Companies, "@")
-                'Debug.Print(Me.OutlookItem.Companies)
-                'Debug.Print(tervTeny(0))
-                'Debug.Print(tervTeny(1))
+                'Debug.WriteLine(Me.OutlookItem.Companies)
+                'Debug.WriteLine(tervTeny(0))
+                'Debug.WriteLine(tervTeny(1))
                 'Me.NumericUpDown1.Value = CInt(tervTeny(0))
                 Me.NumericUpDown2.Value = CInt(tervTeny(1))
             Catch ex2 As Exception
-                'Me.NumericUpDown1.Value = 0
-
+                Debug.WriteLine("FR:Meeting:NoCompanies:" + Me.OutlookItem.Subject)
+                Me.NumericUpDown2.Value = 0
             End Try
             Try
                 Dim elapsedTime As TimeSpan = Me.OutlookItem.End.Subtract(Me.OutlookItem.Start)
                 Me.NumericUpDown1.Value = elapsedTime.TotalMinutes
             Catch ex As Exception
+                Debug.WriteLine("FR:Meeting:Subtract:" + Me.OutlookItem.Subject)
             End Try
             Me.NumericUpDown1.Enabled = False
         ElseIf (TypeOf Me.OutlookItem Is Outlook.TaskItem) Then
@@ -93,11 +94,12 @@ Public Class FormRegion1
                 Me.NumericUpDown1.Value = Me.OutlookItem.ActualWork
                 'Me.NumericUpDown2.Value = Me.OutlookItem.TotalWork
             Catch ex As Exception
-
+                Debug.WriteLine("FR:Task:Actual:" + Me.OutlookItem.Subject)
             End Try
             Try
                 Me.NumericUpDown2.Value = Me.OutlookItem.TotalWork
             Catch ex As Exception
+                Debug.WriteLine("FR:Task:Total:" + Me.OutlookItem.Subject)
             End Try
             'ElseIf (TypeOf Me.OutlookItem Is Outlook.AppointmentItem) Or (TypeOf Me.OutlookItem Is Outlook.MeetingItem) Then
             Me.NumericUpDown1.Enabled = True

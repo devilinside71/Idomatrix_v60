@@ -1,4 +1,5 @@
-﻿Imports Microsoft.Office.Interop.Outlook
+﻿Imports System.Diagnostics
+Imports Microsoft.Office.Interop.Outlook
 
 Public Class ThisAddIn
     Private taskPaneControl1 As IGMPane
@@ -36,32 +37,32 @@ Public Class ThisAddIn
         Try
             categories.Add("@Nem sürgős - Fontos", Outlook.OlCategoryColor.olCategoryColorGreen)
         Catch ex As System.Exception
-            Console.WriteLine(ex.Message)
+            Debug.WriteLine("Kat:NSF:létezik")
         End Try
         Try
             categories.Add("@Sürgős - Fontos", Outlook.OlCategoryColor.olCategoryColorBlue)
         Catch ex As System.Exception
-            Console.WriteLine(ex.Message)
+            Debug.WriteLine("Kat:SF:létezik")
         End Try
         Try
             categories.Add("@Sürgős - Nem fontos", Outlook.OlCategoryColor.olCategoryColorYellow)
         Catch ex As System.Exception
-            Console.WriteLine(ex.Message)
+            Debug.WriteLine("Kat:SNF:létezik")
         End Try
         Try
             categories.Add("@Nem sürgős - Nem fontos", Outlook.OlCategoryColor.olCategoryColorRed)
         Catch ex As System.Exception
-            Console.WriteLine(ex.Message)
+            Debug.WriteLine("Kat:NSNF:létezik")
         End Try
         Try
             categories.Add("@Havi feladat", Outlook.OlCategoryColor.olCategoryColorSteel)
         Catch ex As System.Exception
-            Console.WriteLine(ex.Message)
+            Debug.WriteLine("Kat:HaviFEA:létezik")
         End Try
         Try
             categories.Add("@Havi cél", Outlook.OlCategoryColor.olCategoryColorGray)
         Catch ex As System.Exception
-            Console.WriteLine(ex.Message)
+            Debug.WriteLine("Kat:HaviCél:létezik")
         End Try
     End Sub
 
