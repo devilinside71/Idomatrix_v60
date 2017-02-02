@@ -177,6 +177,7 @@ Partial Class FormRegion1
         'NumericUpDown1
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(37, 3)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {1440, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 18)
         Me.NumericUpDown1.TabIndex = 1
@@ -210,6 +211,7 @@ Partial Class FormRegion1
         'NumericUpDown2
         '
         Me.NumericUpDown2.Location = New System.Drawing.Point(37, 3)
+        Me.NumericUpDown2.Maximum = New Decimal(New Integer() {1440, 0, 0, 0})
         Me.NumericUpDown2.Name = "NumericUpDown2"
         Me.NumericUpDown2.Size = New System.Drawing.Size(120, 18)
         Me.NumericUpDown2.TabIndex = 1

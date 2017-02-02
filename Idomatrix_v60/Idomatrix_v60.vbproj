@@ -35,7 +35,7 @@
     <PublishUrl>L:\LOGISZT\1_Szemelyes_mappak\Tamas_Laszlo\Idomatrixok\IGM_v60_Dell\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.2</ApplicationVersion>
+    <ApplicationVersion>1.0.0.5</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
