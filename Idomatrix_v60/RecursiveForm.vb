@@ -50,10 +50,11 @@ Public Class RecursiveForm
             'myOptionalAttendee = myItem.Recipients.Add("Kevin Kennedy")
             'myResourceAttendee = myItem.Recipients.Add("Conference Room B")
             myItem.Categories = catStr
-            myItem.Display(True)
+            'myItem.Display(True)
+            myItem.Save()
             startDate = startDate.AddDays(1)
         Loop
-
+        Windows.Forms.MessageBox.Show("Bevitel kész!", subject)
     End Sub
 
 
