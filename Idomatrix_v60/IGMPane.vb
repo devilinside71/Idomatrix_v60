@@ -109,6 +109,7 @@ Public Class IGMPane
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
 
+
     End Sub
     Private Sub IGMPane_Load(sender As Object, e As EventArgs) Handles Me.Load
         Debug.Print("Pane betöltése")
@@ -824,25 +825,30 @@ Me.TableLayoutPanel14.ColumnStyles
             newItemForm.Button1.BackColor = Drawing.Color.CornflowerBlue
             newItemForm.Button2.BackColor = Drawing.Color.CornflowerBlue
             newItemForm.Button3.BackColor = Drawing.Color.CornflowerBlue
+            newItemForm.Button4.BackColor = Drawing.Color.CornflowerBlue
             newItemForm.Button3.Visible = False
+            newItemForm.Button4.Visible = True
         End If
         If catStr = "@Sürgős - Nem fontos" Then
             newItemForm.Button1.BackColor = Drawing.Color.Yellow
             newItemForm.Button2.BackColor = Drawing.Color.Yellow
             newItemForm.Button3.BackColor = Drawing.Color.Yellow
             newItemForm.Button3.Visible = True
+            newItemForm.Button4.Visible = False
         End If
         If catStr = "@Nem sürgős - Fontos" Then
             newItemForm.Button1.BackColor = Drawing.Color.LimeGreen
             newItemForm.Button2.BackColor = Drawing.Color.LimeGreen
             newItemForm.Button3.BackColor = Drawing.Color.LimeGreen
             newItemForm.Button3.Visible = False
+            newItemForm.Button4.Visible = False
         End If
         If catStr = "@Nem sürgős - Nem fontos" Then
             newItemForm.Button1.BackColor = Drawing.Color.Salmon
             newItemForm.Button2.BackColor = Drawing.Color.Salmon
             newItemForm.Button3.BackColor = Drawing.Color.Salmon
             newItemForm.Button3.Visible = False
+            newItemForm.Button4.Visible = False
         End If
 
 
@@ -858,7 +864,13 @@ Me.TableLayoutPanel14.ColumnStyles
         If newItemForm.ItemChoiced = 3 Then
             'Spec levelezés
             'Call CreateSpecAppt(catStr, "Levelezés átnézése", 90)
-            Call CreateSpecTask(catStr, "Levelezés átnézése", 90)
+            Call CreateSpecTask(catStr, "Levelezés átnézése", 60)
+            'MessageBox.Show("Ide a spec jön")
+        End If
+        If newItemForm.ItemChoiced = 4 Then
+            'Spec levelezés
+            'Call CreateSpecAppt(catStr, "Levelezés átnézése", 90)
+            Call CreateSpecAppt(catStr, "Tárgyalás/Skype összegzése", 30)
             'MessageBox.Show("Ide a spec jön")
         End If
     End Sub
@@ -880,11 +892,12 @@ Me.TableLayoutPanel14.ColumnStyles
         Dim myItem As Object
         'Dim myRequiredAttendee, myOptionalAttendee, myResourceAttendee As Outlook.Recipient
         myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olAppointmentItem)
-        myItem.Subject = subject + " (r)"
+        'myItem.Subject = subject + " (r)"
+        myItem.Subject = subject
         'myItem.Location = "Conference Room B"
         'myItem.Start = #9/24/2015 1:30:00 PM#
-        myItem.Start = DateTime.Today
-        myItem.ActualWork = duration
+        myItem.Start = DateTime.Now
+        myItem.Duration = duration
         myItem.ReminderSet = False
         'myRequiredAttendee = myItem.Recipients.Add("Nate Sun")
         'myOptionalAttendee = myItem.Recipients.Add("Kevin Kennedy")
@@ -900,7 +913,8 @@ Me.TableLayoutPanel14.ColumnStyles
         Dim myItem As Object
 
         myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem)
-        myItem.Subject = subject + " (r)"
+        'myItem.Subject = subject + " (r)"
+        myItem.Subject = subject
         myItem.StartDate = DateTime.Today
 
         myItem.ActualWork = duration
@@ -1438,4 +1452,12 @@ Me.TableLayoutPanel14.ColumnStyles
 
         Return Math.Max(line1, line2)
     End Function
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim newRecursiveForm As RecursiveForm
+
+        newRecursiveForm = New RecursiveForm
+
+        newRecursiveForm.Show()
+    End Sub
 End Class

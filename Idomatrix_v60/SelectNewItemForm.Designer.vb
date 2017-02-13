@@ -27,6 +27,7 @@ Partial Class SelectNewItemForm
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -39,6 +40,7 @@ Partial Class SelectNewItemForm
         Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Button2, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Button3, 0, 7)
+        Me.TableLayoutPanel1.Controls.Add(Me.Button4, 0, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -96,6 +98,16 @@ Partial Class SelectNewItemForm
         Me.Button3.Text = "<< Levelezés >>"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Button4
+        '
+        Me.Button4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button4.Location = New System.Drawing.Point(3, 195)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(267, 42)
+        Me.Button4.TabIndex = 4
+        Me.Button4.Text = "Tárgyalási/Skype összegzés"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'SelectNewItemForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -115,4 +127,5 @@ Partial Class SelectNewItemForm
     Friend WithEvents Button1 As Windows.Forms.Button
     Friend WithEvents Button2 As Windows.Forms.Button
     Friend WithEvents Button3 As Windows.Forms.Button
+    Friend WithEvents Button4 As Windows.Forms.Button
 End Class

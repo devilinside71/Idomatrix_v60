@@ -214,6 +214,12 @@
     <Compile Include="IGMPane.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="RecursiveForm.Designer.vb">
+      <DependentUpon>RecursiveForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecursiveForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ribbon.vb">
       <XmlRibbon>true</XmlRibbon>
     </Compile>
@@ -234,6 +240,9 @@
     </Compile>
     <EmbeddedResource Include="FormRegion1.resx">
       <DependentUpon>FormRegion1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursiveForm.resx">
+      <DependentUpon>RecursiveForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectNewItemForm.resx">
       <DependentUpon>SelectNewItemForm.vb</DependentUpon>

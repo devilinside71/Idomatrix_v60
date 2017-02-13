@@ -513,6 +513,7 @@ Partial Class IGMPane
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(56, 23)
         Me.Button6.TabIndex = 4
+        Me.Button6.Text = "GYORS"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel5
