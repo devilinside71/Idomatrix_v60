@@ -121,8 +121,11 @@ Public Class IGMPane
     Private Sub OpenItem(sender As Object)
         Dim myItem As Object
 
-        myItem = Globals.ThisAddIn.Application.Session.GetItemFromID(sender.SelectedItems.Item(0).SubItems.Item(3).Text)
-        myItem.Display(True)
+        Try
+            myItem = Globals.ThisAddIn.Application.Session.GetItemFromID(sender.SelectedItems.Item(0).SubItems.Item(3).Text)
+            myItem.Display(False)
+        Catch ex As Exception
+        End Try
         Call RefreshData()
 
     End Sub
@@ -561,6 +564,10 @@ Me.TableLayoutPanel14.ColumnStyles
         'Dim filter As String = "[DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "' AND [DueDate] <= '" + Format(endTime, "yyyy/MM/dd") + "'"
         'Dim filter As String = "[DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
         Dim filter As String = "[DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "' OR [Complete] <> True"
+
+        'Mindent mutasson?
+        'Dim filter As String = "[DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
+
 
         'Debug.WriteLine(filter)
         Try
