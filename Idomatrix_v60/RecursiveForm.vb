@@ -35,47 +35,61 @@ Public Class RecursiveForm
     Private Sub WriteAppt(catStr As String, subject As String, startDate As Date, endDate As Date, duration As Integer)
         Dim myItem As Object
         'Dim myRequiredAttendee, myOptionalAttendee, myResourceAttendee As Outlook.Recipient
+        Dim cCount As Integer = 0
 
         Do While startDate <= endDate
-            myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olAppointmentItem)
-            'myItem.Subject = subject + " (r)"
-            myItem.Subject = subject
-            'myItem.Location = "Conference Room B"
-            'myItem.Start = #9/24/2015 1:30:00 PM#
-            myItem.Start = startDate
-            myItem.Duration = duration
-            'myItem.End = DateValue(startDate) + TimeValue(duration)
-            'myItem.ReminderSet = False
-            'myRequiredAttendee = myItem.Recipients.Add("Nate Sun")
-            'myOptionalAttendee = myItem.Recipients.Add("Kevin Kennedy")
-            'myResourceAttendee = myItem.Recipients.Add("Conference Room B")
-            myItem.Categories = catStr
-            'myItem.Display(True)
-            myItem.Save()
-            startDate = startDate.AddDays(1)
+            Try
+                myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olAppointmentItem)
+                'myItem.Subject = subject + " (r)"
+                myItem.Subject = subject
+                'myItem.Location = "Conference Room B"
+                'myItem.Start = #9/24/2015 1:30:00 PM#
+                myItem.Start = startDate
+                myItem.Duration = duration
+                'myItem.End = DateValue(startDate) + TimeValue(duration)
+                'myItem.ReminderSet = False
+                'myRequiredAttendee = myItem.Recipients.Add("Nate Sun")
+                'myOptionalAttendee = myItem.Recipients.Add("Kevin Kennedy")
+                'myResourceAttendee = myItem.Recipients.Add("Conference Room B")
+                myItem.Categories = catStr
+                'myItem.Display(True)
+                myItem.Save()
+                startDate = startDate.AddDays(1)
+                cCount = cCount + 1
+
+            Catch ex As Exception
+
+            End Try
         Loop
-        Windows.Forms.MessageBox.Show("Bevitel kész!", subject)
+        Windows.Forms.MessageBox.Show(cCount.ToString + " találkozó bevitele kész!", subject)
     End Sub
 
 
     Private Sub WriteTask(catStr As String, subject As String, startDate As Date, endDate As Date, duration As Integer)
         Dim myItem As Object
+        Dim cCount As Integer = 0
 
         Do While startDate <= endDate
-            myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem)
-            'myItem.Subject = subject + " (r)"
-            myItem.Subject = subject
-            myItem.StartDate = startDate
+            Try
+                myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem)
+                'myItem.Subject = subject + " (r)"
+                myItem.Subject = subject
+                myItem.StartDate = startDate
 
-            myItem.ActualWork = duration
-            myItem.ReminderSet = False
-            myItem.Categories = catStr
-            myItem.Display(True)
-            'myItem.Save()
-            startDate = startDate.AddDays(1)
+                myItem.ActualWork = duration
+                myItem.ReminderSet = False
+                myItem.Categories = catStr
+                myItem.Display(True)
+                'myItem.Save()
+                startDate = startDate.AddDays(1)
+                cCount = cCount + 1
+            Catch ex As Exception
+
+            End Try
+
 
         Loop
-        Windows.Forms.MessageBox.Show("Bevitel kész!", subject)
+        Windows.Forms.MessageBox.Show(cCount.ToString + " feladat bevitele kész!", subject)
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
