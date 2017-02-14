@@ -204,10 +204,16 @@ Public Class IGMPane
         resultEvalNSF = resNSF
         resultEvalNSNF = resNSNF
 
-        resTNSF = CInt(resultT_NSF / resultT_sum * 100)
-        resTSF = CInt(resultT_SF / resultT_sum * 100)
-        resTSNF = CInt(resultT_SNF / resultT_sum * 100)
-        resTNSNF = CInt(resultT_NSNF / resultT_sum * 100)
+        Try
+            resTNSF = CInt(resultT_NSF / resultT_sum * 100)
+            resTSF = CInt(resultT_SF / resultT_sum * 100)
+            resTSNF = CInt(resultT_SNF / resultT_sum * 100)
+            resTNSNF = CInt(resultT_NSNF / resultT_sum * 100)
+
+        Catch ex As Exception
+
+        End Try
+
         If resTNSNF < 0 Then
             resTNSNF = 0
         End If
@@ -377,6 +383,7 @@ Me.TableLayoutPanel14.ColumnStyles
         Dim resultMin As String
         Dim resultMinInt As Integer
         Dim maxYear As Long = 2040
+        Dim minYear As Long = 4501
         Dim calFolder As Outlook.Folder = TryCast(Globals.ThisAddIn.Application.Session.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderTasks), Outlook.Folder)
         Dim startTime As DateTime = DateTimePicker1.Value.Date
         'A nullaóra miatt 1 nap eltérés kell
@@ -564,13 +571,18 @@ Me.TableLayoutPanel14.ColumnStyles
     Private Function GetTasksInRange(folder As Outlook.Folder, startTime As DateTime, endTime As DateTime) As Outlook.Items
         'Dim filter As String = "[DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "' AND [DueDate] <= '" + Format(endTime, "yyyy/MM/dd") + "'"
         'Dim filter As String = "[DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
-        Dim filter As String = "[DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "' OR [Complete] <> True"
+        'Dim filter As String = "[DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "' OR [Complete] <> True"
+        'Dim filter As String = "([DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "' AND [StartDate] <= '" + Format(startTime, "yyyy/MM/dd") + "') OR [Complete] <> True"
+        'Dim filter As String = "([DueDate] >= '" + Format(endTime, "yyyy/MM/dd") + "' AND [StartDate] <= '" + Format(startTime, "yyyy/MM/dd") + "')"
+        'Dim filter As String = "[StartDate] <= '" + Format(startTime, "yyyy/MM/dd") + "' AND [Complete] <> True" 'Jó
+        'Dim filter As String = "[StartDate] >= '" + Format(startTime, "yyyy/MM/dd") + "' AND [StartDate] <= '" + Format(endTime, "yyyy/MM/dd") + "'"
+
 
         'Mindent mutasson?
-        'Dim filter As String = "[DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
-
-
-        'Debug.WriteLine(filter)
+        Dim filter As String = "[StartDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
+        Debug.WriteLine(startTime)
+        Debug.WriteLine(endTime)
+        Debug.WriteLine(filter)
         Try
             Dim calItems As Outlook.Items = folder.Items
             calItems.IncludeRecurrences = True
