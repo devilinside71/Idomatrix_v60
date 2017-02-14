@@ -62,6 +62,7 @@ Public Class RecursiveForm
                 cCount = cCount + 1
 
             Catch ex As Exception
+                Debug.WriteLine("WriteAppt hiba")
 
             End Try
         Loop
@@ -79,7 +80,7 @@ Public Class RecursiveForm
                 'myItem.Subject = subject + " (r)"
                 myItem.Subject = subject
                 myItem.StartDate = startDate
-
+                myItem.DueDate = startDate
                 myItem.ActualWork = duration
                 myItem.ReminderSet = False
                 myItem.Categories = catStr
@@ -88,7 +89,7 @@ Public Class RecursiveForm
                 startDate = startDate.AddDays(1)
                 cCount = cCount + 1
             Catch ex As Exception
-
+                Debug.WriteLine("WriteTask hiba")
             End Try
 
 

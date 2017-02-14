@@ -211,7 +211,7 @@ Public Class IGMPane
             resTNSNF = CInt(resultT_NSNF / resultT_sum * 100)
 
         Catch ex As Exception
-
+            resTNSF = 0
         End Try
 
         If resTNSNF < 0 Then
@@ -395,8 +395,8 @@ Me.TableLayoutPanel14.ColumnStyles
 
                 'Csak az adott napi
                 If appt.DueDate <= endTime.AddDays(-1) Then
-                    If appt.Categories.Contains("@Sürgős - Fontos") Then
-                        If (String.IsNullOrEmpty(appt.Categories) = False) Then
+                    If (String.IsNullOrEmpty(appt.Categories) = False) Then
+                        If appt.Categories.Contains("@Sürgős - Fontos") Then
                             With Me.ListView1.Items.Add("F")
                                 .SubItems.Add(appt.Subject)
                                 Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
@@ -584,6 +584,8 @@ Me.TableLayoutPanel14.ColumnStyles
         Dim filter As String = "[StartDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
         'Dim filter As String = "[StartDate] >= '" + Format(startTime, "yyyy/MM/dd") + "' AND [DueDate] >= '" + Format(endTime, "yyyy/MM/dd") + "')"
         'Dim filter As String = "[StartDate] >= " + startTime.ToString("yyyy/MM/dd") + " AND [DueDate] <= " + endTime.ToString("yyyy/MM/dd")
+        'Dim filter As String = "[StartDate] >= " + startTime.ToString("yyyy/MM/dd")
+
         Debug.WriteLine(startTime)
         Debug.WriteLine(endTime)
         Debug.WriteLine(filter)
