@@ -110,4 +110,23 @@ Public Class RecursiveForm
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Call WriteTask(ComboBox2.Text, TextBox2.Text, DateValue(DateTimePicker4.Value.ToString), DateValue(DateTimePicker5.Value.ToString), NumericUpDown2.Value)
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Call WriteAppt(ComboBox3.Text, TextBox3.Text, DateValue(DateTimePicker6.Value.ToString) + TimeValue(DateTimePicker8.Value.ToString), DateValue(DateTimePicker7.Value.ToString) + TimeValue(DateTimePicker8.Value.ToString), NumericUpDown3.Value)
+    End Sub
+
+    Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
+        If Me.ComboBox3.SelectedIndex = 0 Then
+            Me.ComboBox3.BackColor = Drawing.Color.CornflowerBlue
+        End If
+        If Me.ComboBox3.SelectedIndex = 1 Then
+            Me.ComboBox3.BackColor = Drawing.Color.LightGreen
+        End If
+        If Me.ComboBox3.SelectedIndex = 2 Then
+            Me.ComboBox3.BackColor = Drawing.Color.Yellow
+        End If
+        If Me.ComboBox3.SelectedIndex = 3 Then
+            Me.ComboBox3.BackColor = Drawing.Color.Salmon
+        End If
+    End Sub
 End Class
