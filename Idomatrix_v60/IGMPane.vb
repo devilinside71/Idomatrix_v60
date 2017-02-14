@@ -393,170 +393,172 @@ Me.TableLayoutPanel14.ColumnStyles
             For Each appt As Outlook.TaskItem In rangeAppts
                 'Debug.WriteLine("Task Subject: " + appt.Subject + " Start: " + appt.StartDate.ToString("g"))
 
-                If (String.IsNullOrEmpty(appt.Categories) = False) Then
+                'Csak az adott napi
+                If appt.DueDate <= endTime.AddDays(-1) Then
                     If appt.Categories.Contains("@Sürgős - Fontos") Then
-                        With Me.ListView1.Items.Add("F")
-                            .SubItems.Add(appt.Subject)
-                            Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
-                            If CLng(Strings.Left(evStr, 4)) > maxYear Then
-                                evStr = "Nincs"
-                            End If
-                            .SubItems.Add(evStr)
-                            .SubItems.Add(appt.EntryID)
-                            'resultMin = Me.NumericUpDown2.Value.ToString
-                            resultMinInt = appt.ActualWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 20
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
-                            resultSF = resultSF + resultMinInt
-                            resultMinInt = appt.TotalWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 0
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
-                            resultT_SF = resultT_SF + resultMinInt
+                        If (String.IsNullOrEmpty(appt.Categories) = False) Then
+                            With Me.ListView1.Items.Add("F")
+                                .SubItems.Add(appt.Subject)
+                                Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
+                                If CLng(Strings.Left(evStr, 4)) > maxYear Then
+                                    evStr = "Nincs"
+                                End If
+                                .SubItems.Add(evStr)
+                                .SubItems.Add(appt.EntryID)
+                                'resultMin = Me.NumericUpDown2.Value.ToString
+                                resultMinInt = appt.ActualWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 20
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
+                                resultSF = resultSF + resultMinInt
+                                resultMinInt = appt.TotalWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 0
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
+                                resultT_SF = resultT_SF + resultMinInt
 
-                            .SubItems.Add(appt.PercentComplete.ToString + "%")
-                        End With
-                    End If
-                    If appt.Categories.Contains("@Sürgős - Nem fontos") Then
-                        With Me.ListView3.Items.Add("F")
-                            .SubItems.Add(appt.Subject)
-                            Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
-                            If CLng(Strings.Left(evStr, 4)) > maxYear Then
-                                evStr = "Nincs"
-                            End If
-                            .SubItems.Add(evStr)
-                            .SubItems.Add(appt.EntryID)
-                            'resultMin = Me.NumericUpDown2.Value.ToString
-                            resultMinInt = appt.ActualWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 15
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
-                            resultSNF = resultSNF + resultMinInt
-                            resultMinInt = appt.TotalWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 0
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
-                            resultT_SNF = resultT_SNF + resultMinInt
-                            .SubItems.Add(appt.PercentComplete.ToString + "%")
-                        End With
-                    End If
-                    If appt.Categories.Contains("@Nem sürgős - Fontos") Then
-                        With Me.ListView2.Items.Add("F")
-                            .SubItems.Add(appt.Subject)
-                            Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
-                            If CLng(Strings.Left(evStr, 4)) > maxYear Then
-                                evStr = "Nincs"
-                            End If
-                            .SubItems.Add(evStr)
-                            .SubItems.Add(appt.EntryID)
-                            'resultMin = Me.NumericUpDown2.Value.ToString
-                            resultMinInt = appt.ActualWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 25
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
-                            resultNSF = resultNSF + resultMinInt
-                            resultMinInt = appt.TotalWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 0
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
-                            resultT_NSF = resultT_NSF + resultMinInt
-                            .SubItems.Add(appt.PercentComplete.ToString + "%")
-                        End With
-                    End If
-                    If appt.Categories.Contains("@Nem sürgős - Nem fontos") Then
-                        With Me.ListView4.Items.Add("F")
-                            .SubItems.Add(appt.Subject)
-                            Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
-                            If CLng(Strings.Left(evStr, 4)) > maxYear Then
-                                evStr = "Nincs"
-                            End If
-                            .SubItems.Add(evStr)
-                            .SubItems.Add(appt.EntryID)
-                            'resultMin = Me.NumericUpDown2.Value.ToString
-                            resultMinInt = appt.ActualWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 10
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
-                            resultNSNF = resultNSNF + resultMinInt
-                            resultMinInt = appt.TotalWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 0
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
-                            resultT_NSNF = resultT_NSNF + resultMinInt
-                            .SubItems.Add(appt.PercentComplete.ToString + "%")
-                        End With
-                    End If
-                    If appt.Categories.Contains("@Havi feladat") Then
-                        With Me.ListView6.Items.Add("F")
-                            .SubItems.Add(appt.Subject)
-                            Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
-                            If CLng(Strings.Left(evStr, 4)) > maxYear Then
-                                evStr = "Nincs"
-                            End If
-                            .SubItems.Add(evStr)
-                            .SubItems.Add(appt.EntryID)
-                            '.SubItems.Add("")
-                            resultMinInt = appt.ActualWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 20
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
-                            resultMinInt = appt.TotalWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 0
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
+                                .SubItems.Add(appt.PercentComplete.ToString + "%")
+                            End With
+                        End If
+                        If appt.Categories.Contains("@Sürgős - Nem fontos") Then
+                            With Me.ListView3.Items.Add("F")
+                                .SubItems.Add(appt.Subject)
+                                Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
+                                If CLng(Strings.Left(evStr, 4)) > maxYear Then
+                                    evStr = "Nincs"
+                                End If
+                                .SubItems.Add(evStr)
+                                .SubItems.Add(appt.EntryID)
+                                'resultMin = Me.NumericUpDown2.Value.ToString
+                                resultMinInt = appt.ActualWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 15
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
+                                resultSNF = resultSNF + resultMinInt
+                                resultMinInt = appt.TotalWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 0
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
+                                resultT_SNF = resultT_SNF + resultMinInt
+                                .SubItems.Add(appt.PercentComplete.ToString + "%")
+                            End With
+                        End If
+                        If appt.Categories.Contains("@Nem sürgős - Fontos") Then
+                            With Me.ListView2.Items.Add("F")
+                                .SubItems.Add(appt.Subject)
+                                Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
+                                If CLng(Strings.Left(evStr, 4)) > maxYear Then
+                                    evStr = "Nincs"
+                                End If
+                                .SubItems.Add(evStr)
+                                .SubItems.Add(appt.EntryID)
+                                'resultMin = Me.NumericUpDown2.Value.ToString
+                                resultMinInt = appt.ActualWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 25
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
+                                resultNSF = resultNSF + resultMinInt
+                                resultMinInt = appt.TotalWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 0
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
+                                resultT_NSF = resultT_NSF + resultMinInt
+                                .SubItems.Add(appt.PercentComplete.ToString + "%")
+                            End With
+                        End If
+                        If appt.Categories.Contains("@Nem sürgős - Nem fontos") Then
+                            With Me.ListView4.Items.Add("F")
+                                .SubItems.Add(appt.Subject)
+                                Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
+                                If CLng(Strings.Left(evStr, 4)) > maxYear Then
+                                    evStr = "Nincs"
+                                End If
+                                .SubItems.Add(evStr)
+                                .SubItems.Add(appt.EntryID)
+                                'resultMin = Me.NumericUpDown2.Value.ToString
+                                resultMinInt = appt.ActualWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 10
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
+                                resultNSNF = resultNSNF + resultMinInt
+                                resultMinInt = appt.TotalWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 0
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
+                                resultT_NSNF = resultT_NSNF + resultMinInt
+                                .SubItems.Add(appt.PercentComplete.ToString + "%")
+                            End With
+                        End If
+                        If appt.Categories.Contains("@Havi feladat") Then
+                            With Me.ListView6.Items.Add("F")
+                                .SubItems.Add(appt.Subject)
+                                Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
+                                If CLng(Strings.Left(evStr, 4)) > maxYear Then
+                                    evStr = "Nincs"
+                                End If
+                                .SubItems.Add(evStr)
+                                .SubItems.Add(appt.EntryID)
+                                '.SubItems.Add("")
+                                resultMinInt = appt.ActualWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 20
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
+                                resultMinInt = appt.TotalWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 0
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
 
-                            .SubItems.Add(appt.PercentComplete.ToString + "%")
-                        End With
-                    End If
-                    If appt.Categories.Contains("@Havi cél") Then
-                        With Me.ListView5.Items.Add("F")
-                            .SubItems.Add(appt.Subject)
-                            Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
-                            If CLng(Strings.Left(evStr, 4)) > maxYear Then
-                                evStr = "Nincs"
-                            End If
-                            .SubItems.Add(evStr)
-                            .SubItems.Add(appt.EntryID)
-                            '.SubItems.Add("")
-                            resultMinInt = appt.ActualWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 20
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
-                            resultMinInt = appt.TotalWork
-                            If resultMinInt < 1 Then
-                                resultMinInt = 0
-                            End If
-                            resultMin = resultMinInt.ToString
-                            .SubItems.Add(resultMin)
+                                .SubItems.Add(appt.PercentComplete.ToString + "%")
+                            End With
+                        End If
+                        If appt.Categories.Contains("@Havi cél") Then
+                            With Me.ListView5.Items.Add("F")
+                                .SubItems.Add(appt.Subject)
+                                Dim evStr = Format(appt.DueDate, "yyyy/MM/dd")
+                                If CLng(Strings.Left(evStr, 4)) > maxYear Then
+                                    evStr = "Nincs"
+                                End If
+                                .SubItems.Add(evStr)
+                                .SubItems.Add(appt.EntryID)
+                                '.SubItems.Add("")
+                                resultMinInt = appt.ActualWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 20
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
+                                resultMinInt = appt.TotalWork
+                                If resultMinInt < 1 Then
+                                    resultMinInt = 0
+                                End If
+                                resultMin = resultMinInt.ToString
+                                .SubItems.Add(resultMin)
 
-                            .SubItems.Add(appt.PercentComplete.ToString + "%")
-                        End With
+                                .SubItems.Add(appt.PercentComplete.ToString + "%")
+                            End With
+                        End If
                     End If
                 End If
-
             Next
             If rangeAppts IsNot Nothing Then Marshal.ReleaseComObject(rangeAppts)
         End If
@@ -580,6 +582,8 @@ Me.TableLayoutPanel14.ColumnStyles
 
         'Mindent mutasson?
         Dim filter As String = "[StartDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
+        'Dim filter As String = "[StartDate] >= '" + Format(startTime, "yyyy/MM/dd") + "' AND [DueDate] >= '" + Format(endTime, "yyyy/MM/dd") + "')"
+        'Dim filter As String = "[StartDate] >= " + startTime.ToString("yyyy/MM/dd") + " AND [DueDate] <= " + endTime.ToString("yyyy/MM/dd")
         Debug.WriteLine(startTime)
         Debug.WriteLine(endTime)
         Debug.WriteLine(filter)
