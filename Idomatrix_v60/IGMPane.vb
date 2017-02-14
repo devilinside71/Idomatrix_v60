@@ -614,142 +614,160 @@ Me.TableLayoutPanel14.ColumnStyles
         If rangeAppts IsNot Nothing Then
             For Each appt As Outlook.MailItem In rangeAppts
                 'Debug.WriteLine("EmailTask Subject: " + appt.Subject)
+                'Csak az adott napi
 
-                If (String.IsNullOrEmpty(appt.Categories) = False) Then
-                    If appt.Categories.Contains("@Sürgős - Fontos") Then
-                        With Me.ListView1.Items.Add("E")
-                            .SubItems.Add(appt.Subject)
-                            .SubItems.Add(Format(appt.CreationTime, "yyyy/MM/dd"))
-                            .SubItems.Add(appt.EntryID)
-                            'resultMin = Me.NumericUpDown2.Value.ToString
-                            'resultMin2 = Me.NumericUpDown2.Value.ToString
-                            Try
-                                Dim tervTeny As String() = Split(appt.Companies, "@")
-                                If tervTeny(0) <> "" Then
-                                    resultMin = tervTeny(0)
-                                Else
-                                    resultMin = "0"
-                                End If
+                If appt.TaskDueDate <= endTime.AddDays(-1) Then
+                    If (String.IsNullOrEmpty(appt.Categories) = False) Then
+                        If appt.Categories.Contains("@Sürgős - Fontos") Then
+                            With Me.ListView1.Items.Add("E")
+                                .SubItems.Add(appt.Subject)
+                                .SubItems.Add(Format(appt.CreationTime, "yyyy/MM/dd"))
+                                .SubItems.Add(appt.EntryID)
+                                'resultMin = Me.NumericUpDown2.Value.ToString
+                                'resultMin2 = Me.NumericUpDown2.Value.ToString
                                 Try
-                                    If tervTeny(1) <> "" Then
-                                        resultMin2 = tervTeny(1)
+                                    Dim tervTeny As String() = Split(appt.Companies, "@")
+                                    If tervTeny(0) <> "" Then
+                                        resultMin = tervTeny(0)
                                     Else
-                                        resultMin2 = "0"
+                                        resultMin = "0"
                                     End If
+                                    Try
+                                        If tervTeny(1) <> "" Then
+                                            resultMin2 = tervTeny(1)
+                                        Else
+                                            resultMin2 = "0"
+                                        End If
+                                    Catch ex As Exception
+                                        resultMin2 = "0"
+                                    End Try
                                 Catch ex As Exception
-                                    resultMin2 = "0"
-                                End Try
-                            Catch ex As Exception
-                                resultMin = "0"
-                            End Try
-                            .SubItems.Add(resultMin)
-                            resultT_SF = resultT_SF + CDbl(resultMin2)
-                            .SubItems.Add(resultMin2)
-                            resultSF = resultSF + CDbl(resultMin)
-                            .SubItems.Add("")
-                        End With
-                    End If
-                    If appt.Categories.Contains("@Sürgős - Nem fontos") Then
-                        With Me.ListView3.Items.Add("E")
-                            .SubItems.Add(appt.Subject)
-                            .SubItems.Add(Format(appt.CreationTime, "yyyy/MM/dd"))
-                            .SubItems.Add(appt.EntryID)
-                            'resultMin = Me.NumericUpDown3.Value.ToString
-                            'resultMin2 = Me.NumericUpDown2.Value.ToString
-                            Try
-                                Dim tervTeny As String() = Split(appt.Companies, "@")
-                                If tervTeny(0) <> "" Then
-                                    resultMin = tervTeny(0)
-                                Else
                                     resultMin = "0"
-                                End If
-                                Try
-                                    If tervTeny(1) <> "" Then
-                                        resultMin2 = tervTeny(1)
-                                    Else
-                                        resultMin2 = "0"
-                                    End If
-                                Catch ex As Exception
-                                    resultMin2 = "0"
                                 End Try
-                            Catch ex As Exception
-                                resultMin = "0"
-                            End Try
-                            .SubItems.Add(resultMin)
-                            resultT_SNF = resultT_SNF + CDbl(resultMin2)
-                            .SubItems.Add(resultMin2)
-                            resultSNF = resultSNF + CDbl(resultMin)
-                            .SubItems.Add("")
-                        End With
-                    End If
-                    If appt.Categories.Contains("@Nem sürgős - Fontos") Then
-                        With Me.ListView2.Items.Add("E")
-                            .SubItems.Add(appt.Subject)
-                            .SubItems.Add(Format(appt.CreationTime, "yyyy/MM/dd"))
-                            .SubItems.Add(appt.EntryID)
-                            'resultMin = Me.NumericUpDown1.Value.ToString
-                            'resultMin2 = Me.NumericUpDown2.Value.ToString
-                            Try
-                                Dim tervTeny As String() = Split(appt.Companies, "@")
-                                If tervTeny(0) <> "" Then
-                                    resultMin = tervTeny(0)
+                                .SubItems.Add(resultMin)
+                                resultT_SF = resultT_SF + CDbl(resultMin2)
+                                .SubItems.Add(resultMin2)
+                                resultSF = resultSF + CDbl(resultMin)
+                                If appt.FlagStatus = Microsoft.Office.Interop.Outlook.OlFlagStatus.olFlagComplete Then
+                                    .SubItems.Add("100%")
                                 Else
-                                    resultMin = "0"
+                                    .SubItems.Add("")
                                 End If
+                            End With
+                        End If
+                        If appt.Categories.Contains("@Sürgős - Nem fontos") Then
+                            With Me.ListView3.Items.Add("E")
+                                .SubItems.Add(appt.Subject)
+                                .SubItems.Add(Format(appt.CreationTime, "yyyy/MM/dd"))
+                                .SubItems.Add(appt.EntryID)
+                                'resultMin = Me.NumericUpDown3.Value.ToString
+                                'resultMin2 = Me.NumericUpDown2.Value.ToString
                                 Try
-                                    If tervTeny(1) <> "" Then
-                                        resultMin2 = tervTeny(1)
+                                    Dim tervTeny As String() = Split(appt.Companies, "@")
+                                    If tervTeny(0) <> "" Then
+                                        resultMin = tervTeny(0)
                                     Else
-                                        resultMin2 = "0"
+                                        resultMin = "0"
                                     End If
+                                    Try
+                                        If tervTeny(1) <> "" Then
+                                            resultMin2 = tervTeny(1)
+                                        Else
+                                            resultMin2 = "0"
+                                        End If
+                                    Catch ex As Exception
+                                        resultMin2 = "0"
+                                    End Try
                                 Catch ex As Exception
-                                    resultMin2 = "0"
+                                    resultMin = "0"
                                 End Try
-                            Catch ex As Exception
-                                resultMin = "0"
-                            End Try
-                            .SubItems.Add(resultMin)
-                            resultT_NSF = resultT_NSF + CDbl(resultMin2)
-                            .SubItems.Add(resultMin2)
-                            resultNSF = resultNSF + CDbl(resultMin)
-                            .SubItems.Add("")
-                        End With
-                    End If
-                    If appt.Categories.Contains("@Nem sürgős - Nem fontos") Then
-                        With Me.ListView4.Items.Add("E")
-                            .SubItems.Add(appt.Subject)
-                            .SubItems.Add(Format(appt.CreationTime, "yyyy/MM/dd"))
-                            .SubItems.Add(appt.EntryID)
-                            'resultMin = Me.NumericUpDown4.Value.ToString
-                            'resultMin2 = Me.NumericUpDown2.Value.ToString
-                            Try
-                                Dim tervTeny As String() = Split(appt.Companies, "@")
-                                If tervTeny(0) <> "" Then
-                                    resultMin = tervTeny(0)
+                                .SubItems.Add(resultMin)
+                                resultT_SNF = resultT_SNF + CDbl(resultMin2)
+                                .SubItems.Add(resultMin2)
+                                resultSNF = resultSNF + CDbl(resultMin)
+                                If appt.FlagStatus = Microsoft.Office.Interop.Outlook.OlFlagStatus.olFlagComplete Then
+                                    .SubItems.Add("100%")
                                 Else
-                                    resultMin = "0"
+                                    .SubItems.Add("")
                                 End If
+                            End With
+                        End If
+                        If appt.Categories.Contains("@Nem sürgős - Fontos") Then
+                            With Me.ListView2.Items.Add("E")
+                                .SubItems.Add(appt.Subject)
+                                .SubItems.Add(Format(appt.CreationTime, "yyyy/MM/dd"))
+                                .SubItems.Add(appt.EntryID)
+                                'resultMin = Me.NumericUpDown1.Value.ToString
+                                'resultMin2 = Me.NumericUpDown2.Value.ToString
                                 Try
-                                    If tervTeny(1) <> "" Then
-                                        resultMin2 = tervTeny(1)
+                                    Dim tervTeny As String() = Split(appt.Companies, "@")
+                                    If tervTeny(0) <> "" Then
+                                        resultMin = tervTeny(0)
                                     Else
-                                        resultMin2 = "0"
+                                        resultMin = "0"
                                     End If
+                                    Try
+                                        If tervTeny(1) <> "" Then
+                                            resultMin2 = tervTeny(1)
+                                        Else
+                                            resultMin2 = "0"
+                                        End If
+                                    Catch ex As Exception
+                                        resultMin2 = "0"
+                                    End Try
                                 Catch ex As Exception
-                                    resultMin2 = "0"
+                                    resultMin = "0"
                                 End Try
-                            Catch ex As Exception
-                                resultMin = "0"
-                            End Try
-                            .SubItems.Add(resultMin)
-                            resultT_NSNF = resultT_NSNF + CDbl(resultMin2)
-                            .SubItems.Add(resultMin2)
-                            resultNSNF = resultNSNF + CDbl(resultMin)
-                            .SubItems.Add("")
-                        End With
+                                .SubItems.Add(resultMin)
+                                resultT_NSF = resultT_NSF + CDbl(resultMin2)
+                                .SubItems.Add(resultMin2)
+                                resultNSF = resultNSF + CDbl(resultMin)
+                                If appt.FlagStatus = Microsoft.Office.Interop.Outlook.OlFlagStatus.olFlagComplete Then
+                                    .SubItems.Add("100%")
+                                Else
+                                    .SubItems.Add("")
+                                End If
+                            End With
+                        End If
+                        If appt.Categories.Contains("@Nem sürgős - Nem fontos") Then
+                            With Me.ListView4.Items.Add("E")
+                                .SubItems.Add(appt.Subject)
+                                .SubItems.Add(Format(appt.CreationTime, "yyyy/MM/dd"))
+                                .SubItems.Add(appt.EntryID)
+                                'resultMin = Me.NumericUpDown4.Value.ToString
+                                'resultMin2 = Me.NumericUpDown2.Value.ToString
+                                Try
+                                    Dim tervTeny As String() = Split(appt.Companies, "@")
+                                    If tervTeny(0) <> "" Then
+                                        resultMin = tervTeny(0)
+                                    Else
+                                        resultMin = "0"
+                                    End If
+                                    Try
+                                        If tervTeny(1) <> "" Then
+                                            resultMin2 = tervTeny(1)
+                                        Else
+                                            resultMin2 = "0"
+                                        End If
+                                    Catch ex As Exception
+                                        resultMin2 = "0"
+                                    End Try
+                                Catch ex As Exception
+                                    resultMin = "0"
+                                End Try
+                                .SubItems.Add(resultMin)
+                                resultT_NSNF = resultT_NSNF + CDbl(resultMin2)
+                                .SubItems.Add(resultMin2)
+                                resultNSNF = resultNSNF + CDbl(resultMin)
+                                If appt.FlagStatus = Microsoft.Office.Interop.Outlook.OlFlagStatus.olFlagComplete Then
+                                    .SubItems.Add("100%")
+                                Else
+                                    .SubItems.Add("")
+                                End If
+                            End With
+                        End If
                     End If
                 End If
-
             Next
             If rangeAppts IsNot Nothing Then Marshal.ReleaseComObject(rangeAppts)
 
@@ -763,7 +781,8 @@ Me.TableLayoutPanel14.ColumnStyles
         'Dim filter As String = "[CreationTime] >= '" + Format(startTime, "yyyy/MM/dd")
         'Dim filter As String = "[CreationTime] >= '" + startTime.ToString("g") + "' AND [CreationTime] <= '" + endTime.ToString("g") + "'"
         'Dim filter As String = "[IsMarkedAsTask] = True"
-        Dim filter As String = "[TaskDueDate] >= '" + Format(startTime.AddDays(-1), "yyyy/MM/dd") + "'"
+        'Dim filter As String = "[TaskDueDate] >= '" + Format(startTime.AddDays(-1), "yyyy/MM/dd") + "'"
+        Dim filter As String = "[TaskStartDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
         'Debug.WriteLine(filter)
         Try
             Dim calItems As Outlook.Items = folder.Items
