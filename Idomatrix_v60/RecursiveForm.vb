@@ -20,15 +20,19 @@ Public Class RecursiveForm
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         If Me.ComboBox1.SelectedIndex = 0 Then
             Me.ComboBox1.BackColor = Drawing.Color.CornflowerBlue
+            Me.TextBox1.BackColor = Drawing.Color.CornflowerBlue
         End If
         If Me.ComboBox1.SelectedIndex = 1 Then
             Me.ComboBox1.BackColor = Drawing.Color.LightGreen
+            Me.TextBox1.BackColor = Drawing.Color.LightGreen
         End If
         If Me.ComboBox1.SelectedIndex = 2 Then
             Me.ComboBox1.BackColor = Drawing.Color.Yellow
+            Me.TextBox1.BackColor = Drawing.Color.Yellow
         End If
         If Me.ComboBox1.SelectedIndex = 3 Then
             Me.ComboBox1.BackColor = Drawing.Color.Salmon
+            Me.TextBox1.BackColor = Drawing.Color.Salmon
         End If
     End Sub
 
@@ -79,8 +83,8 @@ Public Class RecursiveForm
                 myItem.ActualWork = duration
                 myItem.ReminderSet = False
                 myItem.Categories = catStr
-                myItem.Display(True)
-                'myItem.Save()
+                'myItem.Display(True)
+                myItem.Save()
                 startDate = startDate.AddDays(1)
                 cCount = cCount + 1
             Catch ex As Exception
@@ -95,15 +99,19 @@ Public Class RecursiveForm
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         If Me.ComboBox2.SelectedIndex = 0 Then
             Me.ComboBox2.BackColor = Drawing.Color.CornflowerBlue
+            Me.TextBox2.BackColor = Drawing.Color.CornflowerBlue
         End If
         If Me.ComboBox2.SelectedIndex = 1 Then
             Me.ComboBox2.BackColor = Drawing.Color.LightGreen
+            Me.TextBox2.BackColor = Drawing.Color.LightGreen
         End If
         If Me.ComboBox2.SelectedIndex = 2 Then
             Me.ComboBox2.BackColor = Drawing.Color.Yellow
+            Me.TextBox2.BackColor = Drawing.Color.Yellow
         End If
         If Me.ComboBox2.SelectedIndex = 3 Then
             Me.ComboBox2.BackColor = Drawing.Color.Salmon
+            Me.TextBox2.BackColor = Drawing.Color.Salmon
         End If
     End Sub
 
@@ -118,15 +126,88 @@ Public Class RecursiveForm
     Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
         If Me.ComboBox3.SelectedIndex = 0 Then
             Me.ComboBox3.BackColor = Drawing.Color.CornflowerBlue
+            Me.TextBox3.BackColor = Drawing.Color.CornflowerBlue
         End If
         If Me.ComboBox3.SelectedIndex = 1 Then
             Me.ComboBox3.BackColor = Drawing.Color.LightGreen
+            Me.TextBox3.BackColor = Drawing.Color.LightGreen
         End If
         If Me.ComboBox3.SelectedIndex = 2 Then
             Me.ComboBox3.BackColor = Drawing.Color.Yellow
+            Me.TextBox3.BackColor = Drawing.Color.Yellow
         End If
         If Me.ComboBox3.SelectedIndex = 3 Then
             Me.ComboBox3.BackColor = Drawing.Color.Salmon
+            Me.TextBox3.BackColor = Drawing.Color.Salmon
         End If
+    End Sub
+
+    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
+        If Me.ComboBox4.SelectedIndex = 0 Then
+            Me.ComboBox4.BackColor = Drawing.Color.CornflowerBlue
+            Me.TextBox4.BackColor = Drawing.Color.CornflowerBlue
+        End If
+        If Me.ComboBox4.SelectedIndex = 1 Then
+            Me.ComboBox4.BackColor = Drawing.Color.LightGreen
+            Me.TextBox4.BackColor = Drawing.Color.LightGreen
+        End If
+        If Me.ComboBox4.SelectedIndex = 2 Then
+            Me.ComboBox4.BackColor = Drawing.Color.Yellow
+            Me.TextBox4.BackColor = Drawing.Color.Yellow
+        End If
+        If Me.ComboBox4.SelectedIndex = 3 Then
+            Me.ComboBox4.BackColor = Drawing.Color.Salmon
+            Me.TextBox4.BackColor = Drawing.Color.Salmon
+        End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Call WriteTask(ComboBox4.Text, TextBox4.Text, DateValue(DateTimePicker9.Value.ToString), DateValue(DateTimePicker10.Value.ToString), NumericUpDown4.Value)
+    End Sub
+
+    Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
+        If Me.ComboBox5.SelectedIndex = 0 Then
+            Me.ComboBox5.BackColor = Drawing.Color.CornflowerBlue
+            Me.TextBox5.BackColor = Drawing.Color.CornflowerBlue
+        End If
+        If Me.ComboBox5.SelectedIndex = 1 Then
+            Me.ComboBox5.BackColor = Drawing.Color.LightGreen
+            Me.TextBox5.BackColor = Drawing.Color.LightGreen
+        End If
+        If Me.ComboBox5.SelectedIndex = 2 Then
+            Me.ComboBox5.BackColor = Drawing.Color.Yellow
+            Me.TextBox5.BackColor = Drawing.Color.Yellow
+        End If
+        If Me.ComboBox5.SelectedIndex = 3 Then
+            Me.ComboBox5.BackColor = Drawing.Color.Salmon
+            Me.TextBox5.BackColor = Drawing.Color.Salmon
+        End If
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Call WriteTask(ComboBox5.Text, TextBox5.Text, DateValue(DateTimePicker11.Value.ToString), DateValue(DateTimePicker12.Value.ToString), NumericUpDown5.Value)
+    End Sub
+
+    Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox6.SelectedIndexChanged
+        If Me.ComboBox6.SelectedIndex = 0 Then
+            Me.ComboBox6.BackColor = Drawing.Color.CornflowerBlue
+            Me.TextBox6.BackColor = Drawing.Color.CornflowerBlue
+        End If
+        If Me.ComboBox6.SelectedIndex = 1 Then
+            Me.ComboBox6.BackColor = Drawing.Color.LightGreen
+            Me.TextBox6.BackColor = Drawing.Color.LightGreen
+        End If
+        If Me.ComboBox6.SelectedIndex = 2 Then
+            Me.ComboBox6.BackColor = Drawing.Color.Yellow
+            Me.TextBox6.BackColor = Drawing.Color.Yellow
+        End If
+        If Me.ComboBox6.SelectedIndex = 3 Then
+            Me.ComboBox6.BackColor = Drawing.Color.Salmon
+            Me.TextBox6.BackColor = Drawing.Color.Salmon
+        End If
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Call WriteTask(ComboBox6.Text, TextBox6.Text, DateValue(DateTimePicker13.Value.ToString), DateValue(DateTimePicker14.Value.ToString), NumericUpDown6.Value)
     End Sub
 End Class
