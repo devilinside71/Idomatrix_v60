@@ -395,8 +395,10 @@ Me.TableLayoutPanel14.ColumnStyles
             For Each appt As Outlook.TaskItem In rangeAppts
                 'Debug.WriteLine("Task Subject: " + appt.Subject + " Start: " + appt.StartDate.ToString("g"))
 
-                'Csak az adott napi
-                If appt.DueDate <= endTime.AddDays(-1) Then
+                'Csak az adott napi AddDays(-1)
+                'If endTime.AddDays(-1) <= appt.DueDate Then
+                'If appt.DueDate <= endTime.AddDays(-1) Then
+                Debug.Print(appt.PercentComplete)
                     If (String.IsNullOrEmpty(appt.Categories) = False) Then
                         If appt.Categories.Contains("@Sürgős - Fontos") Then
                             With Me.ListView1.Items.Add("F")
@@ -424,6 +426,7 @@ Me.TableLayoutPanel14.ColumnStyles
                                 resultT_SF = resultT_SF + resultMinInt
 
                                 .SubItems.Add(appt.PercentComplete.ToString + "%")
+
                             End With
                         End If
                         If appt.Categories.Contains("@Sürgős - Nem fontos") Then
@@ -560,7 +563,8 @@ Me.TableLayoutPanel14.ColumnStyles
                             End With
                         End If
                     End If
-                End If
+                    'FOR után
+                'End If
             Next
             If rangeAppts IsNot Nothing Then Marshal.ReleaseComObject(rangeAppts)
         End If
@@ -583,9 +587,9 @@ Me.TableLayoutPanel14.ColumnStyles
 
 
         'Mindent mutasson?
-        Dim filter As String = "[StartDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
+        'Dim filter As String = "[StartDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
         'Dim filter As String = "[StartDate] >= '" + Format(startTime, "yyyy/MM/dd") + "' AND [DueDate] >= '" + Format(endTime, "yyyy/MM/dd") + "')"
-        'Dim filter As String = "[StartDate] >= " + startTime.ToString("yyyy/MM/dd") + " AND [DueDate] <= " + endTime.ToString("yyyy/MM/dd")
+        Dim filter As String = "[StartDate] <= '" + Format(endTime, "yyyy/MM/dd") + "' AND [DueDate] >= '" + Format(startTime, "yyyy/MM/dd") + "'"
         'Dim filter As String = "[StartDate] >= " + startTime.ToString("yyyy/MM/dd")
 
         Debug.WriteLine(startTime)
