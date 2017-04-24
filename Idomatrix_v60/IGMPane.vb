@@ -1351,9 +1351,14 @@ Me.TableLayoutPanel14.ColumnStyles
     End Sub
     Private Sub CreateTask(catStr As String)
         Dim myItem As Object
+        Dim FirstDay As Date
+        FirstDay = DateSerial(Today.Year, Today.Month, Today.Day)
+
         myItem = Globals.ThisAddIn.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem)
         myItem.Categories = catStr
         myItem.ActualWork = 30
+        myItem.StartDate = FirstDay
+        myItem.DueDate = FirstDay
         myItem.Display(True)
         'MessageBox.Show("Feladat")
 

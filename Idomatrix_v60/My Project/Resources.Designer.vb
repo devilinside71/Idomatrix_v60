@@ -302,14 +302,14 @@ Namespace My.Resources
         '''&lt;td class=&quot;havi05&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;havi05&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;auto-style10&quot; colspan=&quot;3&quot;&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;havi06&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;havi06&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;havi06&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;havi06&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;havi06&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/td&gt;
         '''&lt;/tr&gt;
         '''
         '''&lt;/table&gt;
         '''&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-        '''&lt;!-- end ReportMonthlyTableE [rest of string was truncated]&quot;;.
+        '''&lt;!-- end ReportMonthlyTableEnd --&gt;.
         '''</summary>
         Friend ReadOnly Property ReportMonthlyTableEnd() As String
             Get
