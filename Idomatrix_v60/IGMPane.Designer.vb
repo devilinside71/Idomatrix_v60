@@ -1621,7 +1621,7 @@ Partial Class IGMPane
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(191, 18)
         Me.Label50.TabIndex = 0
-        Me.Label50.Text = "62%"
+        Me.Label50.Text = "64%"
         Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label51

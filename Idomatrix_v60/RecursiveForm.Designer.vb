@@ -62,23 +62,32 @@ Partial Class RecursiveForm
         Me.TableLayoutPanel13 = New System.Windows.Forms.TableLayoutPanel()
         Me.NumericUpDown4 = New System.Windows.Forms.NumericUpDown()
         Me.TableLayoutPanel14 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel15 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker11 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker12 = New System.Windows.Forms.DateTimePicker()
-        Me.NumericUpDown5 = New System.Windows.Forms.NumericUpDown()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel15 = New System.Windows.Forms.TableLayoutPanel()
+        Me.DateTimePicker12 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker11 = New System.Windows.Forms.DateTimePicker()
+        Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
+        Me.NumericUpDown5 = New System.Windows.Forms.NumericUpDown()
         Me.TableLayoutPanel17 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel18 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel19 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker13 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker14 = New System.Windows.Forms.DateTimePicker()
-        Me.NumericUpDown6 = New System.Windows.Forms.NumericUpDown()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel18 = New System.Windows.Forms.TableLayoutPanel()
+        Me.DateTimePicker14 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker13 = New System.Windows.Forms.DateTimePicker()
+        Me.TableLayoutPanel19 = New System.Windows.Forms.TableLayoutPanel()
+        Me.NumericUpDown6 = New System.Windows.Forms.NumericUpDown()
+        Me.TableLayoutPanel20 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel21 = New System.Windows.Forms.TableLayoutPanel()
+        Me.DateTimePicker15 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker16 = New System.Windows.Forms.DateTimePicker()
+        Me.TableLayoutPanel22 = New System.Windows.Forms.TableLayoutPanel()
+        Me.NumericUpDown7 = New System.Windows.Forms.NumericUpDown()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -104,6 +113,10 @@ Partial Class RecursiveForm
         Me.TableLayoutPanel18.SuspendLayout()
         Me.TableLayoutPanel19.SuspendLayout()
         CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel20.SuspendLayout()
+        Me.TableLayoutPanel21.SuspendLayout()
+        Me.TableLayoutPanel22.SuspendLayout()
+        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -115,6 +128,7 @@ Partial Class RecursiveForm
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel20, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel5, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel8, 0, 1)
@@ -621,6 +635,39 @@ Partial Class RecursiveForm
         Me.TableLayoutPanel14.Size = New System.Drawing.Size(174, 120)
         Me.TableLayoutPanel14.TabIndex = 4
         '
+        'Button5
+        '
+        Me.Button5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Button5.Location = New System.Drawing.Point(3, 99)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(168, 18)
+        Me.Button5.TabIndex = 6
+        Me.Button5.Text = "OK"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"@Sürgős - Fontos", "@Nem sürgős - Fontos", "@Sürgős - Nem fontos", "@Nem sürgős - Nem fontos"})
+        Me.ComboBox5.Location = New System.Drawing.Point(3, 75)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(168, 20)
+        Me.ComboBox5.TabIndex = 5
+        Me.ComboBox5.Text = "@Sürgős - Fontos"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(3, 3)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(168, 18)
+        Me.TextBox5.TabIndex = 3
+        Me.TextBox5.Text = "CRM töltés"
+        '
         'TableLayoutPanel15
         '
         Me.TableLayoutPanel15.ColumnCount = 2
@@ -636,6 +683,24 @@ Partial Class RecursiveForm
         Me.TableLayoutPanel15.Size = New System.Drawing.Size(168, 18)
         Me.TableLayoutPanel15.TabIndex = 0
         '
+        'DateTimePicker12
+        '
+        Me.DateTimePicker12.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.DateTimePicker12.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker12.Location = New System.Drawing.Point(87, 3)
+        Me.DateTimePicker12.Name = "DateTimePicker12"
+        Me.DateTimePicker12.Size = New System.Drawing.Size(78, 18)
+        Me.DateTimePicker12.TabIndex = 3
+        '
+        'DateTimePicker11
+        '
+        Me.DateTimePicker11.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.DateTimePicker11.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker11.Location = New System.Drawing.Point(3, 3)
+        Me.DateTimePicker11.Name = "DateTimePicker11"
+        Me.DateTimePicker11.Size = New System.Drawing.Size(78, 18)
+        Me.DateTimePicker11.TabIndex = 2
+        '
         'TableLayoutPanel16
         '
         Me.TableLayoutPanel16.ColumnCount = 2
@@ -650,34 +715,6 @@ Partial Class RecursiveForm
         Me.TableLayoutPanel16.Size = New System.Drawing.Size(168, 18)
         Me.TableLayoutPanel16.TabIndex = 1
         '
-        'TextBox5
-        '
-        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(3, 3)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(168, 18)
-        Me.TextBox5.TabIndex = 3
-        Me.TextBox5.Text = "CRM töltés"
-        '
-        'DateTimePicker11
-        '
-        Me.DateTimePicker11.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.DateTimePicker11.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker11.Location = New System.Drawing.Point(3, 3)
-        Me.DateTimePicker11.Name = "DateTimePicker11"
-        Me.DateTimePicker11.Size = New System.Drawing.Size(78, 18)
-        Me.DateTimePicker11.TabIndex = 2
-        '
-        'DateTimePicker12
-        '
-        Me.DateTimePicker12.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.DateTimePicker12.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker12.Location = New System.Drawing.Point(87, 3)
-        Me.DateTimePicker12.Name = "DateTimePicker12"
-        Me.DateTimePicker12.Size = New System.Drawing.Size(78, 18)
-        Me.DateTimePicker12.TabIndex = 3
-        '
         'NumericUpDown5
         '
         Me.NumericUpDown5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
@@ -686,29 +723,6 @@ Partial Class RecursiveForm
         Me.NumericUpDown5.Size = New System.Drawing.Size(78, 18)
         Me.NumericUpDown5.TabIndex = 3
         Me.NumericUpDown5.Value = New Decimal(New Integer() {30, 0, 0, 0})
-        '
-        'ComboBox5
-        '
-        Me.ComboBox5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Items.AddRange(New Object() {"@Sürgős - Fontos", "@Nem sürgős - Fontos", "@Sürgős - Nem fontos", "@Nem sürgős - Nem fontos"})
-        Me.ComboBox5.Location = New System.Drawing.Point(3, 75)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(168, 20)
-        Me.ComboBox5.TabIndex = 5
-        Me.ComboBox5.Text = "@Sürgős - Fontos"
-        '
-        'Button5
-        '
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Button5.Location = New System.Drawing.Point(3, 99)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(168, 18)
-        Me.Button5.TabIndex = 6
-        Me.Button5.Text = "OK"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel17
         '
@@ -731,6 +745,39 @@ Partial Class RecursiveForm
         Me.TableLayoutPanel17.Size = New System.Drawing.Size(174, 120)
         Me.TableLayoutPanel17.TabIndex = 5
         '
+        'Button6
+        '
+        Me.Button6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Button6.Location = New System.Drawing.Point(3, 99)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(168, 18)
+        Me.Button6.TabIndex = 6
+        Me.Button6.Text = "OK"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"@Sürgős - Fontos", "@Nem sürgős - Fontos", "@Sürgős - Nem fontos", "@Nem sürgős - Nem fontos"})
+        Me.ComboBox6.Location = New System.Drawing.Point(3, 75)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(168, 20)
+        Me.ComboBox6.TabIndex = 5
+        Me.ComboBox6.Text = "@Sürgős - Fontos"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(3, 3)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(168, 18)
+        Me.TextBox6.TabIndex = 3
+        Me.TextBox6.Text = "Ebéd"
+        '
         'TableLayoutPanel18
         '
         Me.TableLayoutPanel18.ColumnCount = 2
@@ -746,6 +793,24 @@ Partial Class RecursiveForm
         Me.TableLayoutPanel18.Size = New System.Drawing.Size(168, 18)
         Me.TableLayoutPanel18.TabIndex = 0
         '
+        'DateTimePicker14
+        '
+        Me.DateTimePicker14.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.DateTimePicker14.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker14.Location = New System.Drawing.Point(87, 3)
+        Me.DateTimePicker14.Name = "DateTimePicker14"
+        Me.DateTimePicker14.Size = New System.Drawing.Size(78, 18)
+        Me.DateTimePicker14.TabIndex = 3
+        '
+        'DateTimePicker13
+        '
+        Me.DateTimePicker13.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.DateTimePicker13.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker13.Location = New System.Drawing.Point(3, 3)
+        Me.DateTimePicker13.Name = "DateTimePicker13"
+        Me.DateTimePicker13.Size = New System.Drawing.Size(78, 18)
+        Me.DateTimePicker13.TabIndex = 2
+        '
         'TableLayoutPanel19
         '
         Me.TableLayoutPanel19.ColumnCount = 2
@@ -760,34 +825,6 @@ Partial Class RecursiveForm
         Me.TableLayoutPanel19.Size = New System.Drawing.Size(168, 18)
         Me.TableLayoutPanel19.TabIndex = 1
         '
-        'TextBox6
-        '
-        Me.TextBox6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(3, 3)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(168, 18)
-        Me.TextBox6.TabIndex = 3
-        Me.TextBox6.Text = "Ebéd"
-        '
-        'DateTimePicker13
-        '
-        Me.DateTimePicker13.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.DateTimePicker13.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker13.Location = New System.Drawing.Point(3, 3)
-        Me.DateTimePicker13.Name = "DateTimePicker13"
-        Me.DateTimePicker13.Size = New System.Drawing.Size(78, 18)
-        Me.DateTimePicker13.TabIndex = 2
-        '
-        'DateTimePicker14
-        '
-        Me.DateTimePicker14.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.DateTimePicker14.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker14.Location = New System.Drawing.Point(87, 3)
-        Me.DateTimePicker14.Name = "DateTimePicker14"
-        Me.DateTimePicker14.Size = New System.Drawing.Size(78, 18)
-        Me.DateTimePicker14.TabIndex = 3
-        '
         'NumericUpDown6
         '
         Me.NumericUpDown6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
@@ -797,28 +834,116 @@ Partial Class RecursiveForm
         Me.NumericUpDown6.TabIndex = 3
         Me.NumericUpDown6.Value = New Decimal(New Integer() {30, 0, 0, 0})
         '
-        'ComboBox6
+        'TableLayoutPanel20
         '
-        Me.ComboBox6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ComboBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Items.AddRange(New Object() {"@Sürgős - Fontos", "@Nem sürgős - Fontos", "@Sürgős - Nem fontos", "@Nem sürgős - Nem fontos"})
-        Me.ComboBox6.Location = New System.Drawing.Point(3, 75)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(168, 20)
-        Me.ComboBox6.TabIndex = 5
-        Me.ComboBox6.Text = "@Sürgős - Fontos"
+        Me.TableLayoutPanel20.ColumnCount = 1
+        Me.TableLayoutPanel20.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel20.Controls.Add(Me.Button7, 0, 4)
+        Me.TableLayoutPanel20.Controls.Add(Me.ComboBox7, 0, 3)
+        Me.TableLayoutPanel20.Controls.Add(Me.TextBox7, 0, 0)
+        Me.TableLayoutPanel20.Controls.Add(Me.TableLayoutPanel21, 0, 1)
+        Me.TableLayoutPanel20.Controls.Add(Me.TableLayoutPanel22, 0, 2)
+        Me.TableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel20.Location = New System.Drawing.Point(4, 385)
+        Me.TableLayoutPanel20.Name = "TableLayoutPanel20"
+        Me.TableLayoutPanel20.RowCount = 5
+        Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel20.Size = New System.Drawing.Size(174, 122)
+        Me.TableLayoutPanel20.TabIndex = 6
         '
-        'Button6
+        'Button7
         '
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Button6.Location = New System.Drawing.Point(3, 99)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(168, 18)
-        Me.Button6.TabIndex = 6
-        Me.Button6.Text = "OK"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Button7.Location = New System.Drawing.Point(3, 99)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(168, 20)
+        Me.Button7.TabIndex = 6
+        Me.Button7.Text = "OK"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Items.AddRange(New Object() {"@Sürgős - Fontos", "@Nem sürgős - Fontos", "@Sürgős - Nem fontos", "@Nem sürgős - Nem fontos"})
+        Me.ComboBox7.Location = New System.Drawing.Point(3, 75)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(168, 20)
+        Me.ComboBox7.TabIndex = 5
+        Me.ComboBox7.Text = "@Sürgős - Fontos"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.TextBox7.Location = New System.Drawing.Point(3, 3)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(168, 18)
+        Me.TextBox7.TabIndex = 3
+        Me.TextBox7.Text = "Utazás"
+        '
+        'TableLayoutPanel21
+        '
+        Me.TableLayoutPanel21.ColumnCount = 2
+        Me.TableLayoutPanel21.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel21.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel21.Controls.Add(Me.DateTimePicker15, 0, 0)
+        Me.TableLayoutPanel21.Controls.Add(Me.DateTimePicker16, 0, 0)
+        Me.TableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel21.Location = New System.Drawing.Point(3, 27)
+        Me.TableLayoutPanel21.Name = "TableLayoutPanel21"
+        Me.TableLayoutPanel21.RowCount = 1
+        Me.TableLayoutPanel21.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel21.Size = New System.Drawing.Size(168, 18)
+        Me.TableLayoutPanel21.TabIndex = 0
+        '
+        'DateTimePicker15
+        '
+        Me.DateTimePicker15.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.DateTimePicker15.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker15.Location = New System.Drawing.Point(87, 3)
+        Me.DateTimePicker15.Name = "DateTimePicker15"
+        Me.DateTimePicker15.Size = New System.Drawing.Size(78, 18)
+        Me.DateTimePicker15.TabIndex = 3
+        '
+        'DateTimePicker16
+        '
+        Me.DateTimePicker16.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.DateTimePicker16.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker16.Location = New System.Drawing.Point(3, 3)
+        Me.DateTimePicker16.Name = "DateTimePicker16"
+        Me.DateTimePicker16.Size = New System.Drawing.Size(78, 18)
+        Me.DateTimePicker16.TabIndex = 2
+        '
+        'TableLayoutPanel22
+        '
+        Me.TableLayoutPanel22.ColumnCount = 2
+        Me.TableLayoutPanel22.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel22.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel22.Controls.Add(Me.NumericUpDown7, 0, 0)
+        Me.TableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel22.Location = New System.Drawing.Point(3, 51)
+        Me.TableLayoutPanel22.Name = "TableLayoutPanel22"
+        Me.TableLayoutPanel22.RowCount = 1
+        Me.TableLayoutPanel22.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel22.Size = New System.Drawing.Size(168, 18)
+        Me.TableLayoutPanel22.TabIndex = 1
+        '
+        'NumericUpDown7
+        '
+        Me.NumericUpDown7.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.NumericUpDown7.Location = New System.Drawing.Point(3, 3)
+        Me.NumericUpDown7.Maximum = New Decimal(New Integer() {300, 0, 0, 0})
+        Me.NumericUpDown7.Name = "NumericUpDown7"
+        Me.NumericUpDown7.Size = New System.Drawing.Size(78, 18)
+        Me.NumericUpDown7.TabIndex = 3
+        Me.NumericUpDown7.Value = New Decimal(New Integer() {180, 0, 0, 0})
         '
         'RecursiveForm
         '
@@ -859,6 +984,11 @@ Partial Class RecursiveForm
         Me.TableLayoutPanel18.ResumeLayout(False)
         Me.TableLayoutPanel19.ResumeLayout(False)
         CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel20.ResumeLayout(False)
+        Me.TableLayoutPanel20.PerformLayout()
+        Me.TableLayoutPanel21.ResumeLayout(False)
+        Me.TableLayoutPanel22.ResumeLayout(False)
+        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -926,4 +1056,13 @@ Partial Class RecursiveForm
     Friend WithEvents DateTimePicker13 As Windows.Forms.DateTimePicker
     Friend WithEvents TableLayoutPanel19 As Windows.Forms.TableLayoutPanel
     Friend WithEvents NumericUpDown6 As Windows.Forms.NumericUpDown
+    Friend WithEvents TableLayoutPanel20 As Windows.Forms.TableLayoutPanel
+    Friend WithEvents Button7 As Windows.Forms.Button
+    Friend WithEvents ComboBox7 As Windows.Forms.ComboBox
+    Friend WithEvents TextBox7 As Windows.Forms.TextBox
+    Friend WithEvents TableLayoutPanel21 As Windows.Forms.TableLayoutPanel
+    Friend WithEvents DateTimePicker15 As Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker16 As Windows.Forms.DateTimePicker
+    Friend WithEvents TableLayoutPanel22 As Windows.Forms.TableLayoutPanel
+    Friend WithEvents NumericUpDown7 As Windows.Forms.NumericUpDown
 End Class

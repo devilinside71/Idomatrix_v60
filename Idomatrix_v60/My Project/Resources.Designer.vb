@@ -298,8 +298,8 @@ Namespace My.Resources
         '''  Looks up a localized string similar to &lt;!-- start ReportMonthlyTableEnd  --&gt;
         '''&lt;tr&gt;
         '''&lt;td class=&quot;auto-style9&quot; colspan=&quot;3&quot;&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;havi05&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
-        '''&lt;td class=&quot;havi05&quot;&gt;&lt;strong&gt;alma&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;havi05&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/td&gt;
+        '''&lt;td class=&quot;havi05&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;havi05&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;auto-style10&quot; colspan=&quot;3&quot;&gt;&lt;strong&gt;ÖSSZ:&lt;/strong&gt;&lt;/td&gt;
         '''&lt;td class=&quot;havi06&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/td&gt;

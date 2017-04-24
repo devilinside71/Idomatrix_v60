@@ -403,7 +403,7 @@ Me.TableLayoutPanel14.ColumnStyles
                 'Csak az adott napi AddDays(-1)
                 'If endTime.AddDays(-1) <= appt.DueDate Then
                 'If appt.DueDate <= endTime.AddDays(-1) Then
-                Debug.Print(appt.PercentComplete)
+                'Debug.Print(appt.PercentComplete)
                 If (String.IsNullOrEmpty(appt.Categories) = False) Then
                     If appt.Categories.Contains("@Sürgős - Fontos") Then
                         'ListViewItem1.Font = New Font(ListViewItem1.Font, ListViewItem1.Font.Style Or FontStyle.Strikeout)

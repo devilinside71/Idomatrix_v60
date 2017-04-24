@@ -7,7 +7,7 @@ Public Class RecursiveForm
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
+        Me.ComboBox7.SelectedIndex = 3
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -210,5 +210,32 @@ Public Class RecursiveForm
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Call WriteTask(ComboBox6.Text, TextBox6.Text, DateValue(DateTimePicker13.Value.ToString), DateValue(DateTimePicker14.Value.ToString), NumericUpDown6.Value)
+    End Sub
+
+    Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs) Handles TextBox7.TextChanged
+
+    End Sub
+
+    Private Sub ComboBox7_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox7.SelectedIndexChanged
+        If Me.ComboBox7.SelectedIndex = 0 Then
+            Me.ComboBox7.BackColor = Drawing.Color.CornflowerBlue
+            Me.TextBox7.BackColor = Drawing.Color.CornflowerBlue
+        End If
+        If Me.ComboBox7.SelectedIndex = 1 Then
+            Me.ComboBox7.BackColor = Drawing.Color.LightGreen
+            Me.TextBox7.BackColor = Drawing.Color.LightGreen
+        End If
+        If Me.ComboBox7.SelectedIndex = 2 Then
+            Me.ComboBox7.BackColor = Drawing.Color.Yellow
+            Me.TextBox7.BackColor = Drawing.Color.Yellow
+        End If
+        If Me.ComboBox7.SelectedIndex = 3 Then
+            Me.ComboBox7.BackColor = Drawing.Color.Salmon
+            Me.TextBox7.BackColor = Drawing.Color.Salmon
+        End If
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Call WriteTask(ComboBox7.Text, TextBox7.Text, DateValue(DateTimePicker16.Value.ToString), DateValue(DateTimePicker15.Value.ToString), NumericUpDown7.Value)
     End Sub
 End Class
